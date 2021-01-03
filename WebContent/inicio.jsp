@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@
         <div class="content-menu">
         <input type="checkbox" id="check">
         <label class="icon-menu" for="check">
-        <img src="iconos/icono-menu.png" alt="" class="icon-menu" for="check"></label>
+        <img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
 
         <nav class="menu">
             <ul>

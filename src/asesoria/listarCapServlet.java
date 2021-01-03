@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class listarCapServlet
@@ -27,8 +28,20 @@ public class listarCapServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("listarCapacitacion.jsp").forward(request, response);
-	}
+		String usu, pass;
+		String sesion = (String) request.getParameter("user");
+		HttpSession misesion = request.getSession();
+		misesion.setAttribute("nombresesion", sesion);
+		usu = request.getParameter("usuario");
+		pass = request.getParameter("contra");
+        if(misesion.equals("admin")){
+            //si coincide usuario y password y además no hay sesión iniciada
+            
+            //redirijo a página con información de login exitoso
+        	response.sendRedirect("listarCapacitacion.jsp");
+        }else{
+        	response.sendRedirect("login.jsp");
+        }	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -36,6 +49,8 @@ public class listarCapServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
+		
 	}
 
 }

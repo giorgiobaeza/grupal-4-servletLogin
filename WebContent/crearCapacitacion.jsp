@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +11,12 @@
     <script src="script.js"></script>
 </head>
 <body>
-<header id="seccion">
+	<header id="seccion">
         <h2> CREAR CAPACITACION</h2>
         <div class="content-menu">
         <input type="checkbox" id="check">
-        <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"
-                for="check"></label>
-
+        <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
+		<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>
         <nav class="menu">
             <ul>
                 <li><a href="contacto.html">Contacto</a></li>

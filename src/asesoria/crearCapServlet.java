@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class crearCapServlet
@@ -27,8 +28,8 @@ public class crearCapServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("crearCapacitacion.jsp").forward(request, response);
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -37,6 +38,23 @@ public class crearCapServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
+		
+		HttpSession misesion = request.getSession();
+		String sesion = (String) request.getParameter("user");
+		misesion.setAttribute("nombresesion", sesion);
+		
+		String usu = (String) request.getParameter("user");
+		String pass = (String) request.getParameter("password");
+		request.setAttribute("usuario", usu);
+		request.setAttribute("contra", pass);
+		
+        if(usu.equals("admin") && pass.equals("1234")){
+            response.sendRedirect("contacto.jsp");
+        }else if (usu.equals("") && pass.equals("")){
+        	response.sendRedirect("login.jsp");
+        }else{
+        	response.sendRedirect("login.jsp");
+        }
 	}
 
 }
