@@ -19,11 +19,11 @@
 		<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>		
         <nav class="menu">
             <ul>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.jsp">Contacto</a></li>
                 <li><a href="login.html">Ingreso</a></li>
                 <li><a href="crearusuario.html">Crear Usuario</a></li>
-                <li><a href="crearcapacitacion.html">Crear Capacitaciones</a></li>
-                <li><a href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+                <li><a href="crearCapacitacion.jsp">Crear Capacitaciones</a></li>
+                <li><a href="listarCapacitacion.jsp">Listar Capacitaciones</a></li>
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
