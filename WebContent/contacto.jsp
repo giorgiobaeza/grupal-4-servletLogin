@@ -11,12 +11,6 @@
     <script src="script.js"></script>
 </head>
 <body>
-	<%
-	if(session.getAttribute("nombresesion")==null)
-	{
-		response.sendRedirect("login.jsp");
-	}
-	%>
 	<header id="seccion">
         <h2> FORMULARIO DE CONTACTO</h2>
         <div class="content-menu">
