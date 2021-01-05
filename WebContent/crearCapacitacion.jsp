@@ -6,12 +6,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Crear Capacitación</title>
-<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-
 	<%
 	if(session.getAttribute("nombresesion")==null)
 	{
