@@ -23,6 +23,9 @@
         <input type="checkbox" id="check">
         <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
 		<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>		
+        <a href="./LogoutServlet">
+		cerrar sesión
+		</a>
         <nav class="menu">
             <ul>
                 <li><a href="contacto.jsp">Contacto</a></li>
