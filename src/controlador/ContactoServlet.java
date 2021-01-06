@@ -43,20 +43,7 @@ public class ContactoServlet extends HttpServlet {
 		
 		
 		
-		String usu, pass;
-        usu = request.getParameter("user");
-        pass = request.getParameter("password");
-        if(usu.equals("admin") && pass.equals("1234")){
-            //si coincide usuario y password y además no hay sesión iniciada
-            
-            //redirijo a página con información de login exitoso
-        	HttpSession misesion = request.getSession();
-    		String sesion = (String) request.getParameter("user");
-        	misesion.setAttribute("nombresesion", sesion);
-            response.sendRedirect("contacto.jsp");
-        }else {
-        	response.sendRedirect("login.jsp");
-        }
+		
         
 
 		

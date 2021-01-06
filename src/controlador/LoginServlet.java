@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class loginServlet
@@ -38,6 +39,21 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		
+		String usu, pass;
+        usu = request.getParameter("user");
+        pass = request.getParameter("password");
+        if(usu.equals("admin") && pass.equals("1234")){
+            //si coincide usuario y password y además no hay sesión iniciada
+            
+            //redirijo a página con información de login exitoso
+        	HttpSession misesion = request.getSession();
+    		String sesion = (String) request.getParameter("user");
+        	misesion.setAttribute("nombresesion", sesion);
+            response.sendRedirect("contacto.jsp");
+        }else {
+        	response.sendRedirect("login.jsp");
+        }
 		
 	}
 

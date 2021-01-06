@@ -37,7 +37,7 @@
         </div>
     </header>
 
-    <form action="contactoServlet" method="post">
+    <form action="loginServlet" method="post">
         <fieldset class="cel- agrupar-t agrupar-e">
             <table class="cel- tablausr-t tablausr-e">
                 <tr>
