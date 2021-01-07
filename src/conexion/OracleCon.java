@@ -15,7 +15,7 @@ public class OracleCon {
 		Class.forName ("oracle.jdbc.driver.OracleDriver");  
 
 		//paso 2: crear la conexión con el objeto  
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","ventas", "1234");
+		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","proyecto", "1234");
 		
 		//paso 3: crear objeto statement  
 		Statement stmt=con.createStatement();  

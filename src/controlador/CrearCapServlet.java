@@ -7,10 +7,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import implementacion.CapacitacionImpl;
+import modelo.Capacitacion;
+
 /**
- * Servlet implementation class crearCapServlet
+ * Servlet implementation class CrearCapServlet
  */
-@WebServlet("/crearCapServlet")
+@WebServlet("/CrearCapServlet")
 public class CrearCapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,8 +30,6 @@ public class CrearCapServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("crearCapacitacion.jsp").forward(request, response);
-		
 	}
 
 	/**
@@ -36,9 +37,31 @@ public class CrearCapServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 		
+		int id = Integer.parseInt(request.getParameter("idcap"));
+		String fecha = request.getParameter("capfecha");
+		String hora = request.getParameter("caphora");
+		String lugar = request.getParameter("caplugar");
+		int duracion = Integer.parseInt(request.getParameter("capduracion"));
 		
+		Capacitacion cap = new Capacitacion(id,fecha,hora,lugar,duracion);
+		CapacitacionImpl capimpl = new CapacitacionImpl();
+		boolean res = capimpl.crearCapacitacion(cap);
+		
+		String msg = "";
+		
+		if (res) {
+			msg = "La Capacitacion ha sido creada";
+		}
+		else {
+			msg = "No se pudo guardar la capacitación";
+		}
+		
+		request.setAttribute("mensaje", msg);
+	
+		request.getRequestDispatcher("ConfirmaCrearCap.jsp").forward(request, response);
+        
 	}
 
 }

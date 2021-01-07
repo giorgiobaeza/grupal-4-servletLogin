@@ -46,30 +46,32 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form>
+        <form method="post" action="CrearCapServlet">
             <table class="cel- tablas-t tablas-e">
                 <tr>
+                	<td>id capacitación</td>
+                	<td><input type="date" name="idcap" /></td>
+                </tr>
+                <tr>
                     <td>Fecha de capacitación</td>
-                    <td><input type="date" name="fecha" /></td>
+                    <td><input type="date" name="capfecha" /></td>
                 </tr>
                 <tr>
                     <td>Hora de capacitación</td>
-                    <td><input type="time" name="hora" /></td>
+                    <td><input type="time" name="caphora" /></td>
                 </tr>
                 <tr>
                     <td>Lugar</td>
-                    <td><input type="text" name="text" /></td>
+                    <td><input type="text" name="caplugar" /></td>
                 </tr>
                 <tr>
                     <td>Duración</td>
-                    <td><input type="text" name="duracion" /></td>
+                    <td><input type="text" name="capduracion" /></td>
                 </tr>
-
-                <tr>
-                    <td>Nombre del cliente</td>
-                    <td><input type="text" name="cliente" /></td>
-                </tr>
-            </table>
+				<tr>
+					<td><input type="submit" value="Enviar"></td>
+				</tr>
+                </table>
         </form>
     </fieldset>
     <footer id="pie">

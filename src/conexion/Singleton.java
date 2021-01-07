@@ -13,7 +13,7 @@ public class Singleton {
     private Singleton(){ 
 		String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String usuario = "ventas";
+		String usuario = "proyecto";
 		String password = "1234";
     	
 		try{
