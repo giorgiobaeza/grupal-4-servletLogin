@@ -16,7 +16,7 @@ import modelo.Capacitacion;
 /**
  * Servlet implementation class listarCapServlet
  */
-@WebServlet("/listarCapServlet")
+@WebServlet("/ListarCapServlet")
 public class ListarCapServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -49,7 +49,7 @@ public class ListarCapServlet extends HttpServlet {
 		}
 		
 
-        }	
+    }	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
