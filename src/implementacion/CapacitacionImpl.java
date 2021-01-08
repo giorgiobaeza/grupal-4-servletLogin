@@ -29,8 +29,8 @@ public class CapacitacionImpl implements Icapacitacion {
 			while (rs.next()) {
 				Capacitacion c = new Capacitacion();
 				c.setIdCapacitacion(rs.getInt(1));
-				c.setCapFecha(rs.getDate(2));
-				c.setCapHora(rs.getDate(3));
+				c.setCapFecha(rs.getString(2));
+				c.setCapHora(rs.getString(3));
 				c.setCapLugar(rs.getString(4));
 				c.setCapDuracion(rs.getInt(5));
 				listacapacitacion.add(c);
@@ -52,9 +52,10 @@ public class CapacitacionImpl implements Icapacitacion {
 		Statement stm = null;
 		
 		String sql = "insert into capacitacion values ('" + cap.getIdCapacitacion()
-		+ "','" + cap.getCapFecha() + "','" + cap.getCapHora()
-		+ "','" + cap.getCapLugar() + "','" + cap.getCapDuracion() + "','" + cap.getCliente_rutCliente() + "')";
-		
+		+ "', to_date('" + cap.getCapFecha() + "', 'DD/MM/YYYY'), to_date('" + cap.getCapHora()
+		+ ":00', 'HH24:MI:SS'),'" + cap.getCapLugar() + "','" + cap.getCapDuracion() + "','" + cap.getCliente_rutCliente() + "')";
+		//INSERT INTO capacitacion values(3, TO_DATE('12/07/2020', 'DD/MM/YYYY'), TO_DATE('12:00:00' , 'HH24:MI:SS'), 'colina', 80, 456874578);
+
 		try {
 			con = Singleton.getConnection();
 			stm = con.createStatement();

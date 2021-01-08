@@ -29,18 +29,17 @@
 		</a>
         <nav class="menu">
             <ul>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.html">Ingreso</a></li>
-                <li><a href="crearusuario.html">Crear Usuario</a></li>
-                <li><a href="crearcapacitacion.html">Crear Capacitaciones</a></li>
-                <li><a href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+               <li><a href="contactoServlet">Contacto</a></li>
+                <li><a href="loginServlet">Ingreso</a></li>
+                <li><a href="CrearUsuarioServlet">Crear Usuario</a></li>
+                <li><a href="FormCrearCapServlet">Crear Capacitaciones</a></li>
+                <li><a href="ListarCapServlet">Listar Capacitaciones</a></li>
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
                 <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>
                 <li><a href="reportes.html">Reportes</a></li>
-
             </ul>
         </nav>
         </div>
@@ -83,7 +82,7 @@
         </form>
     </fieldset>
     <footer id="pie">
-        <blockquote><a href="index.html">Volver a la página de Inicio</a></blockquote>
+        <blockquote><a href="inicioServlet">Volver a la página de Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
 </body>
