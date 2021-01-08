@@ -1,7 +1,5 @@
 /conexion/
-/dao/
-/Interfaces/
-/i3nterfaces/
-/interfaces/
-/implementacion/
 /controlador/
+/implementacion/
+/interfaces/
+/modelo/

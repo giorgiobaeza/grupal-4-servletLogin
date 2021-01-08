@@ -59,6 +59,8 @@ public class CapacitacionImpl implements Icapacitacion {
 			con = Singleton.getConnection();
 			stm = con.createStatement();
 			stm.execute(sql);
+			resultado = true;
+			stm.close();
 		}
 		catch(Exception e) {
 			System.out.println(e);
