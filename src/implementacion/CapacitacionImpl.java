@@ -12,7 +12,7 @@ import modelo.Capacitacion;
 
 public class CapacitacionImpl implements Icapacitacion {
 
-	@Override
+	@Override 
 	public List<Capacitacion> obtenerCapacitacion() {
 		
 		Connection con = null;
@@ -29,8 +29,8 @@ public class CapacitacionImpl implements Icapacitacion {
 			while (rs.next()) {
 				Capacitacion c = new Capacitacion();
 				c.setIdCapacitacion(rs.getInt(1));
-				c.setCapFecha(rs.getString(2));
-				c.setCapHora(rs.getString(3));
+				c.setCapFecha(rs.getDate(2));
+				c.setCapHora(rs.getDate(3));
 				c.setCapLugar(rs.getString(4));
 				c.setCapDuracion(rs.getInt(5));
 				listacapacitacion.add(c);

@@ -1,6 +1,10 @@
 package controlador;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,15 +42,30 @@ public class CrearCapServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		
+		Date fechaDate = null;
+		Date horaDate = null;
 		int id = Integer.parseInt(request.getParameter("idcap"));
 		String fecha = request.getParameter("capfecha");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+        	fechaDate = formato.parse(fecha);
+		}
+	    catch(ParseException ex) {
+	    	 System.out.println(ex);
+	    }
 		String hora = request.getParameter("caphora");
+        SimpleDateFormat formatohora = new SimpleDateFormat("h:mm:s");
+        try {
+        	horaDate = formatohora.parse(hora);
+        }
+        catch(ParseException ex) {
+        	 System.out.println(ex);
+        }
 		String lugar = request.getParameter("caplugar");
 		int duracion = Integer.parseInt(request.getParameter("capduracion"));
 		int rutcliente = Integer.parseInt(request.getParameter("caprutcliente"));
 		
-		Capacitacion cap = new Capacitacion(id,fecha,hora,lugar,duracion,rutcliente);
+		Capacitacion cap = new Capacitacion(id,fechaDate,horaDate,lugar,duracion,rutcliente);
 		CapacitacionImpl capimpl = new CapacitacionImpl();
 		boolean res = capimpl.crearCapacitacion(cap);
 		

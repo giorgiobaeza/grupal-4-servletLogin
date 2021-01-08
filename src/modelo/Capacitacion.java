@@ -1,10 +1,13 @@
 package modelo;
 
+
+import java.util.Date;
+
 public class Capacitacion {
 
 	private int idCapacitacion;
-	private String capFecha;
-	private String capHora;
+	private Date capFecha;
+	private Date capHora;
 	private String capLugar;
 	private int capDuracion;
 	private int cliente_rutCliente;
@@ -17,19 +20,19 @@ public class Capacitacion {
 		this.idCapacitacion = idCapacitacion;
 	}
 
-	public String getCapFecha() {
+	public Date getCapFecha() {
 		return capFecha;
 	}
 
-	public void setCapFecha(String capFecha) {
+	public void setCapFecha(Date capFecha) {
 		this.capFecha = capFecha;
 	}
 
-	public String getCapHora() {
+	public Date getCapHora() {
 		return capHora;
 	}
 
-	public void setCapHora(String capHora) {
+	public void setCapHora(Date capHora) {
 		this.capHora = capHora;
 	}
 
@@ -68,7 +71,7 @@ public class Capacitacion {
 		super();
 	}
 
-	public Capacitacion(int idCapacitacion, String capFecha, String capHora, String capLugar, int capDuracion,
+	public Capacitacion(int idCapacitacion, Date capFecha, Date capHora, String capLugar, int capDuracion,
 			int cliente_rutCliente) {
 		super();
 		this.idCapacitacion = idCapacitacion;
