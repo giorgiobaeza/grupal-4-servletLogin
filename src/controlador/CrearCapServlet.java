@@ -44,8 +44,9 @@ public class CrearCapServlet extends HttpServlet {
 		String hora = request.getParameter("caphora");
 		String lugar = request.getParameter("caplugar");
 		int duracion = Integer.parseInt(request.getParameter("capduracion"));
+		int rutcliente = Integer.parseInt(request.getParameter("caprutcliente"));
 		
-		Capacitacion cap = new Capacitacion(id,fecha,hora,lugar,duracion);
+		Capacitacion cap = new Capacitacion(id,fecha,hora,lugar,duracion,rutcliente);
 		CapacitacionImpl capimpl = new CapacitacionImpl();
 		boolean res = capimpl.crearCapacitacion(cap);
 		

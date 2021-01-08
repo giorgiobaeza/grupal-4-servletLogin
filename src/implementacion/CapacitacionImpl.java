@@ -53,7 +53,7 @@ public class CapacitacionImpl implements Icapacitacion {
 		
 		String sql = "insert into capacitacion values ('" + cap.getIdCapacitacion()
 		+ "','" + cap.getCapFecha() + "','" + cap.getCapHora()
-		+ "','" + cap.getCapLugar() + "','" + cap.getCapDuracion() + "')";
+		+ "','" + cap.getCapLugar() + "','" + cap.getCapDuracion() + "','" + cap.getCliente_rutCliente() + "')";
 		
 		try {
 			con = Singleton.getConnection();

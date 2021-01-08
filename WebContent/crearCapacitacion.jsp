@@ -69,6 +69,11 @@
                     <td><input type="text" name="capduracion" /></td>
                 </tr>
 				<tr>
+				<tr>
+                    <td>Rut Cliente</td>
+                    <td><input type="text" name="caprutcliente" /></td>
+                </tr>
+				<tr>
 					<td><input type="submit" value="Enviar"></td>
 				</tr>
                 </table>
