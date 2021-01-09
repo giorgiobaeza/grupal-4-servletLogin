@@ -7,7 +7,9 @@
 <meta charset="ISO-8859-1">
 <title>Crear Capacitación</title>
 	<link rel="stylesheet" href="estilo.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -46,32 +48,32 @@
         </div>
     </header>
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="CrearCapServlet">
+        <form method="post" action="CrearCapServlet" class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                 	<td>id capacitación</td>
-                	<td><input type="date" name="idcap" /></td>
+                	<td><input type="text" name="idcap" id="idcap"/></td>
                 </tr>
                 <tr>
                     <td>Fecha de capacitación</td>
-                    <td><input type="date" name="capfecha" /></td>
+                    <td><input type="date" name="capfecha" id="capfecha"/></td>
                 </tr>
                 <tr>
                     <td>Hora de capacitación</td>
-                    <td><input type="time" name="caphora" /></td>
+                    <td><input type="time" name="caphora" id="caphora"/></td>
                 </tr>
                 <tr>
                     <td>Lugar</td>
-                    <td><input type="text" name="caplugar" /></td>
+                    <td><input type="text" name="caplugar" id="caplugar"/></td>
                 </tr>
                 <tr>
                     <td>Duración</td>
-                    <td><input type="text" name="capduracion" /></td>
+                    <td><input type="text" name="capduracion" id="capduracion" /></td>
                 </tr>
 				<tr>
 				<tr>
                     <td>Rut Cliente</td>
-                    <td><input type="text" name="caprutcliente" /></td>
+                    <td><input type="text" name="caprutcliente" id="caprutcliente" /></td>
                 </tr>
 				<tr>
 					<td><input type="submit" value="Enviar"></td>
