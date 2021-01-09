@@ -687,8 +687,6 @@ $(document).ready(function(){
 
     });
     
-	$( function() {
-		$( "#capfecha" ).datepicker();
-	} );
+	
 
 });
