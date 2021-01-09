@@ -30,7 +30,7 @@ public class UsuarioImpl implements Iusuario{
 				Usuario u = new Usuario();
 				u.setNombre(rs.getString(1));
 				u.setApellido(rs.getString(2));
-				u.setFechaNacimiento(rs.getString(3));
+				u.setFechaNacimiento(rs.getDate(3));
 				u.setRun(rs.getInt(4));
 				listausuario.add(u);
 			}
@@ -39,7 +39,7 @@ public class UsuarioImpl implements Iusuario{
 			System.out.println(e);
 		}
 		
-		return null;
+		return listausuario;
 	}
 
 	@Override

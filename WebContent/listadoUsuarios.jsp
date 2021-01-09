@@ -28,11 +28,11 @@
 		</a>
         <nav class="menu">
             <ul>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="login.html">Ingreso</a></li>
-                <li><a href="crearusuario.html">Crear Usuario</a></li>
-                <li><a href="crearcapacitacion.html">Crear Capacitaciones</a></li>
-                <li><a href="listarcapacitaciones.html">Listar Capacitaciones</a></li>
+               <li><a href="contactoServlet">Contacto</a></li>
+                <li><a href="loginServlet">Ingreso</a></li>
+                <li><a href="CrearUsuarioServlet">Crear Usuario</a></li>
+                <li><a href="FormCrearCapServlet">Crear Capacitaciones</a></li>
+                <li><a href="ListarCapServlet">Listar Capacitaciones</a></li>
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
@@ -47,45 +47,31 @@
     <fieldset class="cel- agrupar-t agrupar-e">
         <table class="cel- tablaadm-t tablaadm-e">
             <tr class="negrita">
-                <td>RUN</td>
-                <td>Nombre</td>
-                <td>Apellidos</td>
-                <td>Tipo de Usuario</td>
-                <td></td>
-                <td></td>
+                
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Tipo de Usuario</th>
+                <th>RUN</th>
+                <th></th>
+                <th></th>
             </tr>
+            <c:forEach items="${lusuario}" var="lu">
             <tr>
-                <td>12555777-6</td>
-                <td>Kevin</td>
-                <td>Chuka</td>
-                <td>Administrativo</td>
+                <td><c:out value="${lu.getNombre()}" /></td>
+                <td><c:out value="${lu.getApellido()}" /></td>
+                <td><c:out value="${lu.getFechaNacimiento()}" /></td>
+                <td><c:out value="${lu.getRun()}" /></td>
                 <td><input type="button" value="Eliminar"></td>
                 <td><input type="button" value="Modificar" name="modif"
                         onclick="location.href='editaradministrativo.html'" /></td>
             </tr>
-            <tr>
-                <td>13666444-7</td>
-                <td>Alan</td>
-                <td>Brito</td>
-                <td>Profesional</td>
-                <td><input type="button" value="Eliminar"></td>
-                <td><input type="button" value="Modificar" name="modif"
-                        onclick="location.href='editarprofesional.html'"></td>
-            </tr>
-            <tr>
-                <td>16444777-3</td>
-                <td>Ramiro</td>
-                <td>Ramirez</td>
-                <td>Cliente</td>
-                <td><input type="button" value="Eliminar"></td>
-                <td><input type="button" value="Modificar" name="modif" onclick="location.href='editarcliente.html'">
-                </td>
-            </tr>
+            </c:forEach>
+           
         </table>
 
     </fieldset>
     <footer id="pie">
-        <blockquote><a href="index.html">Volver a la página de Inicio</a></blockquote>
+        <blockquote><a href="inicioServlet">Volver a la página de Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
 </body>

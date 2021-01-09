@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,14 +39,14 @@ public class CrearCapServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		
 		int id = Integer.parseInt(request.getParameter("idcap"));
 		String fecha = request.getParameter("capfecha");
 		String hora = request.getParameter("caphora");
 		String lugar = request.getParameter("caplugar");
 		int duracion = Integer.parseInt(request.getParameter("capduracion"));
+		int rutcliente = Integer.parseInt(request.getParameter("caprutcliente"));
 		
-		Capacitacion cap = new Capacitacion(id,fecha,hora,lugar,duracion);
+		Capacitacion cap = new Capacitacion(id,fecha,hora,lugar,duracion,rutcliente);
 		CapacitacionImpl capimpl = new CapacitacionImpl();
 		boolean res = capimpl.crearCapacitacion(cap);
 		

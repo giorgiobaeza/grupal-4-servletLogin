@@ -1,5 +1,7 @@
 package modelo;
 
+
+
 public class Capacitacion {
 
 	private int idCapacitacion;
@@ -7,20 +9,8 @@ public class Capacitacion {
 	private String capHora;
 	private String capLugar;
 	private int capDuracion;
+	private int cliente_rutCliente;
 	
-	public Capacitacion(int idCapacitacion, String capFecha, String capHora, String capLugar, int capDuracion) {
-		super();
-		this.idCapacitacion = idCapacitacion;
-		this.capFecha = capFecha;
-		this.capHora = capHora;
-		this.capLugar = capLugar;
-		this.capDuracion = capDuracion;
-	}
-
-	public Capacitacion() {
-		super();
-	}
-
 	public int getIdCapacitacion() {
 		return idCapacitacion;
 	}
@@ -61,11 +51,36 @@ public class Capacitacion {
 		this.capDuracion = capDuracion;
 	}
 
+	public int getCliente_rutCliente() {
+		return cliente_rutCliente;
+	}
+
+	public void setCliente_rutCliente(int cliente_rutCliente) {
+		this.cliente_rutCliente = cliente_rutCliente;
+	}
+
 	@Override
 	public String toString() {
 		return "Capacitacion [idCapacitacion=" + idCapacitacion + ", capFecha=" + capFecha + ", capHora=" + capHora
-				+ ", capLugar=" + capLugar + ", capDuracion=" + capDuracion + "]";
+				+ ", capLugar=" + capLugar + ", capDuracion=" + capDuracion + ", cliente_rutCliente="
+				+ cliente_rutCliente + "]";
 	}
+
+	public Capacitacion() {
+		super();
+	}
+
+	public Capacitacion(int idCapacitacion, String capFecha, String capHora, String capLugar, int capDuracion,
+			int cliente_rutCliente) {
+		super();
+		this.idCapacitacion = idCapacitacion;
+		this.capFecha = capFecha;
+		this.capHora = capHora;
+		this.capLugar = capLugar;
+		this.capDuracion = capDuracion;
+		this.cliente_rutCliente = cliente_rutCliente;
+	}
+	
 	
 	
 }
