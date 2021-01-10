@@ -7,5 +7,5 @@ import modelo.Usuario;
 public interface Iusuario {
 
 	public List<Usuario> obtenerUsuario();
-	public boolean  crearUsuario(Usuario Usr);
+	public boolean crearUsuario(Usuario Usr);
 }

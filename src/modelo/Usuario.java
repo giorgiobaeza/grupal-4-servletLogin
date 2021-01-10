@@ -1,12 +1,11 @@
 package modelo;
 
-import java.util.Date;
 
 public class Usuario {
 
 	private String nombre;
 	private String apellido;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 	private int run;
 	
 	@Override
@@ -31,11 +30,11 @@ public class Usuario {
 		this.apellido = apellido;
 	}
 
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
@@ -51,7 +50,7 @@ public class Usuario {
 		super();
 	}
 
-	public Usuario(String nombre, String apellido, Date fechaNacimiento, int run) {
+	public Usuario(String nombre, String apellido, String fechaNacimiento, int run) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;

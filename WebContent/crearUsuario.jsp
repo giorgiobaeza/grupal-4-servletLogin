@@ -29,7 +29,7 @@
 		</a>
         <nav class="menu">
             <ul>
-               <li><a href="contactoServlet">Contacto</a></li>
+               	<li><a href="contactoServlet">Contacto</a></li>
                 <li><a href="loginServlet">Ingreso</a></li>
                 <li><a href="CrearUsuarioServlet">Crear Usuario</a></li>
                 <li><a href="FormCrearCapServlet">Crear Capacitaciones</a></li>
