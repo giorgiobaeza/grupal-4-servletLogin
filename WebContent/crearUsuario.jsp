@@ -49,6 +49,7 @@
 
     <fieldset class="cel- agrupar-t agrupar-e">
         <form method="post" action="CrearUsuarioServlet" class="cmxform" id="usrForm">
+            <h3><c:out value="${ mensaje }"/></h3>
             <table class="tablausr-t tablausr-e">
                 <tr>
                     <td>Nombre</td>
