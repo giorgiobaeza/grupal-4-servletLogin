@@ -7,7 +7,7 @@ public class Cliente {
 	private String cliApellido;
 	private String cliTelefono;
 	private String cliAfp;
-	private int cliSistemaSalud;
+	private String cliSistemaSalud;
 	private String cliDireccion;
 	private String cliComuna;
 	private int cliEdad;
@@ -43,10 +43,10 @@ public class Cliente {
 	public void setCliAfp(String cliAfp) {
 		this.cliAfp = cliAfp;
 	}
-	public int getCliSistemaSalud() {
+	public String getCliSistemaSalud() {
 		return cliSistemaSalud;
 	}
-	public void setCliSistemaSalud(int cliSistemaSalud) {
+	public void setCliSistemaSalud(String cliSistemaSalud) {
 		this.cliSistemaSalud = cliSistemaSalud;
 	}
 	public String getCliDireccion() {
@@ -83,7 +83,7 @@ public class Cliente {
 	}
 	
 	public Cliente(int rutCliente, String cliNombre, String cliApellido, String cliTelefono, String cliAfp,
-			int cliSistemaSalud, String cliDireccion, String cliComuna, int cliEdad, int usuarioRun) {
+			String cliSistemaSalud, String cliDireccion, String cliComuna, int cliEdad, int usuarioRun) {
 		super();
 		this.rutCliente = rutCliente;
 		this.cliNombre = cliNombre;

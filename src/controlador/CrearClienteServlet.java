@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import implementacion.UsuarioImpl;
 import modelo.Cliente;
-import modelo.Usuario;
 
 /**
  * Servlet implementation class CrearClienteServlet
@@ -41,14 +40,14 @@ public class CrearClienteServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		int rut = Integer.parseInt(request.getParameter("run"));
 		String nombre = request.getParameter("nombre");
-		String apellidos = request.getParameter("apellidos");
-		String telefono = request.getParameter("fnacimiento");
-		String afp = request.getParameter("fnacimiento");
-		int sistemasalud = Integer.parseInt(request.getParameter("rut"));
-		String direccion = request.getParameter("tipousuario");
-		String comuna = request.getParameter("tipousuario");
-		int edad = Integer.parseInt(request.getParameter("rut"));
-		int usuariorun = Integer.parseInt(request.getParameter("rut"));
+		String apellidos = request.getParameter("apellido");
+		String telefono = request.getParameter("telefono");
+		String afp = request.getParameter("afp");
+		String sistemasalud = request.getParameter("sissalud");
+		String direccion = request.getParameter("direc");
+		String comuna = request.getParameter("comuna");
+		int edad = Integer.parseInt(request.getParameter("edad"));
+		int usuariorun = Integer.parseInt(request.getParameter("runusuario"));
 
 		
 		Cliente cli = new Cliente(rut,nombre,apellidos,telefono,afp,sistemasalud,direccion,comuna,edad,usuariorun);
