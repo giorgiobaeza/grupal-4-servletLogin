@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Editar Cliente</title>
 	<link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -26,7 +26,7 @@
         <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
 		<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>		
         <a href="./LogoutServlet">
-		cerrar sesión
+		cerrar sesiÃ³n
 		</a>
         <nav class="menu">
             <ul>
@@ -38,7 +38,7 @@
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
-                <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
+                <li><a href="listadoasesorias.html">Listado AsesorÃ­as</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>
                 <li><a href="reportes.html">Reportes</a></li>
 
@@ -65,7 +65,7 @@
 
                 </tr>
                 <tr>
-                    <td><label for="telefono">Teléfono</label></td>
+                    <td><label for="telefono">TelÃ©fono</label></td>
                     <td><input id="telefono" type="number" name="telefono" /></td>
 
                 </tr>
@@ -76,7 +76,7 @@
                 </tr>
                 <tr>
                     <td><label for="sissalud">Sistema de Salud</label></td>
-                    <td><select id="sissalud" name="sissalud">
+                    <td><select style="margin-right:10px" id="sissalud" name="sissalud">
                             <option value="default">seleccione...</option>
                             <option value="Fonasa">Fonasa</option>
                             <option value="Isapre">Isapre</option>
@@ -105,7 +105,7 @@
         </fieldset>
     </form>
     <footer id="pie">
-        <blockquote><a href="index.html">Volver a la página de Inicio</a></blockquote>
+        <blockquote><a href="index.html">Volver a la pÃ¡gina de Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
 
