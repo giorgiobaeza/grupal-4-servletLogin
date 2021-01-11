@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Crear Usuario</title>
 	<link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -27,7 +27,7 @@
         <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
 		<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>
         <a href="./LogoutServlet">
-		cerrar sesión
+		cerrar sesiÃ³n
 		</a>
         <nav class="menu">
             <ul>
@@ -39,7 +39,7 @@
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
-                <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
+                <li><a href="listadoasesorias.html">Listado AsesorÃ­as</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>
                 <li><a href="reportes.html">Reportes</a></li>
             </ul>
@@ -87,7 +87,7 @@
         </form>
     </fieldset>
     <footer id="pie">
-        <blockquote><a href="inicioServlet">Volver a la página de Inicio</a></blockquote>
+        <blockquote><a href="inicioServlet">Volver a la pÃ¡gina de Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
 </body>

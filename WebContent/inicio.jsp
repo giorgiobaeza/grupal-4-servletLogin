@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Inicio</title>
 <link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -30,7 +30,7 @@
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
-                <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
+                <li><a href="listadoasesorias.html">Listado AsesorÃ­as</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>
                 <li><a href="reportes.html">Reportes</a></li>
 
@@ -41,23 +41,23 @@
     <fieldset class="cel- agrupar-t agrupar-e">
         <section>
 
-                <h3>¿CUÁL ES EL OBJETIVO DEL SISTEMA DE INFORMACIÓN?</h3>
+                <h3>Â¿CUÃL ES EL OBJETIVO DEL SISTEMA DE INFORMACIÃ“N?</h3>
 
-                <p class="cel- texto-t texto-e">Administrar los principales procesos que se llevan a cabo en ella día a día.</p>
+                <p class="cel- texto-t texto-e">Administrar los principales procesos que se llevan a cabo en ella dÃ­a a dÃ­a.</p>
         </section>
 
         <section>
 
-                <h3>¿QUIÉNES DEBERÍAN USAR EL SISTEMA?</h3>
+                <h3>Â¿QUIÃ‰NES DEBERÃAN USAR EL SISTEMA?</h3>
 
                 <p class="cel- texto-t texto-e">Personal responsable de los principales procesos</p>
         </section>
 
         <section>
 
-                <h3>¿QUÉ PROCESOS CONSIDERA LA PLATAFORMA ACTUALMENTE?</h3>
+                <h3>Â¿QUÃ‰ PROCESOS CONSIDERA LA PLATAFORMA ACTUALMENTE?</h3>
 
-                <p class="cel- texto-t texto-e">Asesorías en prevención de riesgos</p>
+                <p class="cel- texto-t texto-e">AsesorÃ­as en prevenciÃ³n de riesgos</p>
         </section>
     </fieldset>
     <footer id="pie">

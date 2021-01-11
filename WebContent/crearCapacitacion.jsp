@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Crear Capacitación</title>
+<meta charset="UTF-8">
+<title>Crear CapacitaciÃ³n</title>
 	<link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
@@ -27,7 +27,7 @@
         <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
 		<p>Bienvenido usuario: <c:out value="${nombresesion}"></c:out></p>
         <a href="./LogoutServlet">
-		cerrar sesión
+		cerrar sesiÃ³n
 		</a>
         <nav class="menu">
             <ul>
@@ -39,7 +39,7 @@
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
                 <li><a href="listadopago.html">Listado Pago</a></li>
-                <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
+                <li><a href="listadoasesorias.html">Listado AsesorÃ­as</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>
                 <li><a href="reportes.html">Reportes</a></li>
 
@@ -51,15 +51,15 @@
         <form method="post" action="CrearCapServlet" class="cmxform" id="capForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
-                	<td>id capacitación</td>
+                	<td>id capacitaciÃ³n</td>
                 	<td><input type="text" name="idcap" id="idcap"/></td>
                 </tr>
                 <tr>
-                    <td>Fecha de capacitación</td>
+                    <td>Fecha de capacitaciÃ³n</td>
                     <td><input type="date" name="capfecha" id="capfecha"/></td>
                 </tr>
                 <tr>
-                    <td>Hora de capacitación</td>
+                    <td>Hora de capacitaciÃ³n</td>
                     <td><input type="time" name="caphora" id="caphora"/></td>
                 </tr>
                 <tr>
@@ -67,7 +67,7 @@
                     <td><input type="text" name="caplugar" id="caplugar"/></td>
                 </tr>
                 <tr>
-                    <td>Duración</td>
+                    <td>DuraciÃ³n</td>
                     <td><input type="text" name="capduracion" id="capduracion" /></td>
                 </tr>
 				<tr>
@@ -82,7 +82,7 @@
         </form>
     </fieldset>
     <footer id="pie">
-        <blockquote><a href="inicioServlet">Volver a la página de Inicio</a></blockquote>
+        <blockquote><a href="inicioServlet">Volver a la pÃ¡gina de Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
 </body>
