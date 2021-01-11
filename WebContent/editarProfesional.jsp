@@ -79,6 +79,11 @@
                     <td><input type="text" name="proyecto" /></td>
 
                 </tr>
+                <tr>
+                    <td>run usuario</td>
+                    <td><input type="text" name="runusuario" /></td>
+
+                </tr>
                 
                 <tr>
                     

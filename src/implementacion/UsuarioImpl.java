@@ -11,6 +11,7 @@ import conexion.Singleton;
 import interfaces.Iusuario;
 import modelo.Administrativo;
 import modelo.Cliente;
+import modelo.Profesional;
 import modelo.Usuario;
 
 public class UsuarioImpl implements Iusuario{
@@ -131,6 +132,32 @@ public class UsuarioImpl implements Iusuario{
 		return resultado;
 	
 	}
+	@Override
+	public boolean crearProfesional(Profesional Pro) {
+		boolean resultado = false;
+		Connection con = null;
+		Statement stm = null;
+		
+		String sql = "INSERT INTO profesional VALUES ('" 
+				+ Pro.getRun() + "','" 
+				+ Pro.getNombre() + "','" 
+				+ Pro.getApellido() + "','" 
+				+ Pro.getTelefono() + "','" 
+				+ Pro.getTituloProfesional() + "','" 
+				+ Pro.getProyecto() + "','" 
+				+ Pro.getUsuarioRun() + "')";
+		try {
+			con = Singleton.getConnection();
+			stm = con.createStatement();
+			stm.execute(sql);
+			resultado = true;
+			stm.close();
+		}
+		catch (SQLException e) {
+			System.out.println(e);
+		}
+		return resultado;
 	
+	}
 
 }

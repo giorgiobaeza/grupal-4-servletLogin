@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import implementacion.UsuarioImpl;
-import modelo.Cliente;
+import modelo.Profesional;
 
 /**
  * Servlet implementation class CrearProfesionalServlet
@@ -42,9 +42,9 @@ public class CrearProfesionalServlet extends HttpServlet {
 		int rut = Integer.parseInt(request.getParameter("run"));
 		String nombre = request.getParameter("nombre");
 		String apellidos = request.getParameter("apellido");
-		String telefono = request.getParameter("telefono");
+		int telefono = Integer.parseInt(request.getParameter("telefono"));
 		String titulo = request.getParameter("titulo");
-		String proyecto = request.getParameter("proyecto");
+		int proyecto = Integer.parseInt(request.getParameter("proyecto"));
 		int usuariorun = Integer.parseInt(request.getParameter("runusuario"));
 	
 

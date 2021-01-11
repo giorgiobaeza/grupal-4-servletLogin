@@ -68,11 +68,11 @@
                 </tr>
                 <tr>
                     <td>Area</td>
-                    <td><input type="text" name="Area" /></td>
+                    <td><input type="text" name="area" /></td>
                 </tr>
                 <tr>
                     <td>run usuario</td>
-                    <td><input type="text" name="Area" /></td>
+                    <td><input type="text" name="runusuario" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Enviar" /></td>
