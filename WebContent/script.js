@@ -52,6 +52,7 @@ $(document).ready(function(){
         }
     });
 });
+
 $(document).ready(function(){
     //plugin gráficos para archivo reportes.html 
 
