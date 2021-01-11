@@ -52,7 +52,7 @@
                 <th>Apellidos</th>
                 <th>Tipo de Usuario</th>
                 <th>RUN</th>
-                <th></th>
+                <th>Tipo de Usuario</th>
                 <th></th>
             </tr>
             <c:forEach items="${lusuario}" var="lu">
@@ -61,6 +61,7 @@
                 <td><c:out value="${lu.getApellido()}" /></td>
                 <td><c:out value="${lu.getFechaNacimiento()}" /></td>
                 <td><c:out value="${lu.getRun()}" /></td>
+                <td><c:out value="${lu.getTipoUsuario()}" /></td>
                 <td><input type="button" value="Modificar" name="modif" onclick="location.href='editaradministrativo.html'" /></td>
             </tr>
             </c:forEach>
