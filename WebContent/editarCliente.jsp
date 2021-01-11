@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Editar Administrativo</title>
+<title>Editar Cliente</title>
 	<link rel="stylesheet" href="estilo.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
@@ -20,7 +20,7 @@
 	}
 	%>
 	<header id="seccion">
-        <h2>Editar Administrativo</h2>
+        <h2>Editar Cliente</h2>
         <div class="content-menu">
         <input type="checkbox" id="check">
         <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>
@@ -46,46 +46,68 @@
         </nav>
         </div>
     </header>
-	<fieldset class="cel- agrupar-t agrupar-e">
-        <form>
+        <form method="post" action="CrearClienteServlet" class="cmxform" id="cliForm">
+        <fieldset class="cel- agrupar-t agrupar-e">
             <table class="cel- tablas-t tablas-e">
                 <tr>
-                    <td>RUN</td>
-                    <td><input type="text" name="run" /></td>
+                    <td><label for="run">RUN</label></td>
+                    <td><input id="run" type="number" name="run" /></td>
 
                 </tr>
                 <tr>
-                    <td>Nombres</td>
-                    <td> <input type="text" name="nombre" /></td>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td><input id="nombre" type="text" name="nombre" /></td>
 
                 </tr>
                 <tr>
-                    <td> Apellidos</td>
-                    <td><input type="text" name="apellido" /></td>
+                    <td><label for="apellido">Apellido</label></td>
+                    <td><input id="apellido" type="text" name="apellido" /></td>
 
                 </tr>
                 <tr>
-                    <td>Teléfono</td>
-                    <td><input type="text" name="telefono" /></td>
+                    <td><label for="telefono">Teléfono</label></td>
+                    <td><input id="telefono" type="number" name="telefono" /></td>
 
                 </tr>
                 <tr>
-                    <td>Título</td>
-                    <td><input type="text" name="titulo" /></td>
+                    <td><label for="afp">AFP</label></td>
+                    <td><input id="afp" type="text" name="afp" /></td>
 
                 </tr>
                 <tr>
-                    <td>Proyecto</td>
-                    <td><input type="text" name="proyecto" /></td>
+                    <td><label for="sissalud">Sistema de Salud</label></td>
+                    <td><select id="sissalud" name="sissalud">
+                            <option value="default">seleccione...</option>
+                            <option value="Fonasa">Fonasa</option>
+                            <option value="Isapre">Isapre</option>
+                        </select></td>
 
+                </tr>
+                <tr>
+                    <td><label for="direc">Direccion </label></td>
+                    <td><input id="direc" type="text" name="direc" /></td>
+
+                </tr>
+                <tr>
+                    <td><label for="comuna">Comuna</label></td>
+                    <td><input id="comuna" type="text" name="comuna" /></td>
+
+                </tr>
+                <tr>
+                    <td><label for="edad">Edad</label></td>
+                    <td><input id="edad" type="number" name="edad" /></td>
+
+                </tr>
+                <tr>
+                    <td><input type="submit" id="validar" value="validar" /></td>
                 </tr>
             </table>
-
-        </form>
-    </fieldset>
+        </fieldset>
+    </form>
     <footer id="pie">
         <blockquote><a href="index.html">Volver a la página de Inicio</a></blockquote>
         Derechos Reservados G3 &copy; 2020
       </footer>
+
 </body>
 </html>
