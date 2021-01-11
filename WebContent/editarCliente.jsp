@@ -99,6 +99,11 @@
 
                 </tr>
                 <tr>
+                    <td><label for="runusuario">Edad</label></td>
+                    <td><input id="runusuario" type="number" name="runusuario" /></td>
+
+                </tr>
+                <tr>
                     <td><input type="submit" id="validar" value="validar" /></td>
                 </tr>
             </table>

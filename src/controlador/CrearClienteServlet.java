@@ -8,19 +8,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import implementacion.UsuarioImpl;
+import modelo.Cliente;
 import modelo.Usuario;
 
 /**
- * Servlet implementation class CrearUsuarioServlet
+ * Servlet implementation class CrearClienteServlet
  */
-@WebServlet("/CrearUsuarioServlet")
-public class CrearUsuarioServlet extends HttpServlet {
+@WebServlet("/CrearClienteServlet")
+public class CrearClienteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CrearUsuarioServlet() {
+    public CrearClienteServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +31,7 @@ public class CrearUsuarioServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//request.getRequestDispatcher("crearUsuario.jsp").forward(request, response);
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -38,29 +39,21 @@ public class CrearUsuarioServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		int rut = Integer.parseInt(request.getParameter("run"));
 		String nombre = request.getParameter("nombre");
 		String apellidos = request.getParameter("apellidos");
-		String fnacimiento = request.getParameter("fnacimiento");
-		int rut = Integer.parseInt(request.getParameter("rut"));
-		String tipousuario = request.getParameter("tipousuario");
+		String telefono = request.getParameter("fnacimiento");
+		String afp = request.getParameter("fnacimiento");
+		int sistemasalud = Integer.parseInt(request.getParameter("rut"));
+		String direccion = request.getParameter("tipousuario");
+		String comuna = request.getParameter("tipousuario");
+		int edad = Integer.parseInt(request.getParameter("rut"));
+		int usuariorun = Integer.parseInt(request.getParameter("rut"));
 
-		Usuario usr = new Usuario(nombre,apellidos,fnacimiento,rut,tipousuario);
+		
+		Cliente cli = new Cliente(rut,nombre,apellidos,telefono,afp,sistemasalud,direccion,comuna,edad,usuariorun);
 		UsuarioImpl usrimpl = new UsuarioImpl();
-		usrimpl.crearUsuario(usr);
-		
-		
-		if (tipousuario.equals("cliente")) {
-			request.getRequestDispatcher("editarCliente.jsp").forward(request, response);
-		}
-		else if (tipousuario.equals("profesional")){
-			request.getRequestDispatcher("editarProfesional.jsp").forward(request, response);
-		}
-		else if (tipousuario.equals("administrativo")){
-			request.getRequestDispatcher("editarAdministrativo.jsp").forward(request, response);
-		}
-		
-	
-        
+		usrimpl.crearCliente(cli);
 	}
 
 }
