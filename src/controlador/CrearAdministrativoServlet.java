@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import implementacion.UsuarioImpl;
-import modelo.Cliente;
+import modelo.Administrativo;
 
 /**
  * Servlet implementation class CrearAdministrativoServlet
@@ -30,7 +30,7 @@ public class CrearAdministrativoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class CrearAdministrativoServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
 		int rut = Integer.parseInt(request.getParameter("run"));
 		String nombre = request.getParameter("nombre");
 		String apellidos = request.getParameter("apellido");

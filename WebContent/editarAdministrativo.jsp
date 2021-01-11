@@ -70,6 +70,13 @@
                     <td>Area</td>
                     <td><input type="text" name="Area" /></td>
                 </tr>
+                <tr>
+                    <td>run usuario</td>
+                    <td><input type="text" name="Area" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Enviar" /></td>
+                </tr>
             </table>
         </form>
     </fieldset>

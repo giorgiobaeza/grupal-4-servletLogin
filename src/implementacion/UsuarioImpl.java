@@ -9,6 +9,7 @@ import java.util.List;
 
 import conexion.Singleton;
 import interfaces.Iusuario;
+import modelo.Administrativo;
 import modelo.Cliente;
 import modelo.Usuario;
 
@@ -91,6 +92,32 @@ public class UsuarioImpl implements Iusuario{
 				+ Cli.getCliComuna() + "','" 
 				+ Cli.getCliEdad() + "','"
 				+ Cli.getUsuarioRun() + "')";
+		try {
+			con = Singleton.getConnection();
+			stm = con.createStatement();
+			stm.execute(sql);
+			resultado = true;
+			stm.close();
+		}
+		catch (SQLException e) {
+			System.out.println(e);
+		}
+		return resultado;
+	
+	}
+	@Override
+	public boolean crearAdministrativo(Administrativo Adm) {
+		boolean resultado = false;
+		Connection con = null;
+		Statement stm = null;
+		
+		String sql = "INSERT INTO administrativo VALUES ('" 
+				+ Adm.getRun() + "','" 
+				+ Adm.getNombre() + "','" 
+				+ Adm.getApellido() + "','" 
+				+ Adm.getEmail() + "','" 
+				+ Adm.getArea() + "','" 
+				+ Adm.getUsuarioRun() + "')";
 		try {
 			con = Singleton.getConnection();
 			stm = con.createStatement();
