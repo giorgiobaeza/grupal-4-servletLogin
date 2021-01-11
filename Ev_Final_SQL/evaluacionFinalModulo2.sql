@@ -119,7 +119,7 @@ CREATE TABLE cliente (
     cliapellidos      VARCHAR2(50) NOT NULL,
     clitelefono       VARCHAR2(20) NOT NULL,
     cliafp            VARCHAR2(30),
-    clisistemasalud   NUMBER(2),
+    clisistemasalud   VARCHAR2(20),
     clidireccion      VARCHAR2(100) NOT NULL,
     clicomuna         VARCHAR2(50) NOT NULL,
     cliedad           NUMBER(3) NOT NULL,
@@ -306,9 +306,9 @@ INSERT INTO usuario values ('alfredo', 'perez', TO_DATE('12/12/1992', 'DD/MM/YYY
 INSERT INTO usuario values ('felipe', 'flores', TO_DATE('30/05/1998', 'DD/MM/YYYY'), 912456778);
 
 --SE CREAN REGISTROS PARA TABLA CLIENTES
-INSERT INTO cliente values (123456748, 'rosita', 'rosales', 5555555, 'modelo', 1, 'calle c', 'colina', 40, 123123456);
-INSERT INTO cliente values (129467767, 'juanita', 'flores', 6666666, 'modelo', 1, 'calle 3', 'colina', 42, 123456456);
-INSERT INTO cliente values (456874578, 'emilio', 'perez', 5556663, 'modelo', 1, 'calle a', 'valparaiso', 46, 111123456);
+INSERT INTO cliente values (123456748, 'rosita', 'rosales', 5555555, 'modelo', 'fonasa', 'calle c', 'colina', 40, 123123456);
+INSERT INTO cliente values (129467767, 'juanita', 'flores', 6666666, 'modelo', 'fonasa', 'calle 3', 'colina', 42, 123456456);
+INSERT INTO cliente values (456874578, 'emilio', 'perez', 5556663, 'modelo', 'fonasa', 'calle a', 'valparaiso', 46, 111123456);
 
 --SE CREAN REGISTROS PARA TABLA CAPACITACION
 INSERT INTO capacitacion values(1, TO_DATE('02/11/2020', 'DD/MM/YYYY'), TO_DATE('12:00:00' , 'HH24:MI:SS'), 'colina', 120, 123456748);
