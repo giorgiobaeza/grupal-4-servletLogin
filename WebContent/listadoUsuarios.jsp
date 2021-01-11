@@ -61,9 +61,7 @@
                 <td><c:out value="${lu.getApellido()}" /></td>
                 <td><c:out value="${lu.getFechaNacimiento()}" /></td>
                 <td><c:out value="${lu.getRun()}" /></td>
-                <td><input type="button" value="Eliminar"></td>
-                <td><input type="button" value="Modificar" name="modif"
-                        onclick="location.href='editaradministrativo.html'" /></td>
+                <td><input type="button" value="Modificar" name="modif" onclick="location.href='editaradministrativo.html'" /></td>
             </tr>
             </c:forEach>
            

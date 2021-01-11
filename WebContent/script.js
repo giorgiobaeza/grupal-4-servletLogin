@@ -759,7 +759,7 @@ $(document).ready(function(){
                 maxlength: "Excede numero máximo de caracteres."
             },
             
-        }
+        }	
 
     });
     
