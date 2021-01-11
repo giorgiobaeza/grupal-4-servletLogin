@@ -65,7 +65,9 @@
                 <td><input type="button" value="Modificar" name="modif" onclick="location.href='editaradministrativo.html'" /></td>
             </tr>
             </c:forEach>
-           
+            <tr>
+            	<td><input type="submit" onclick="location.href='FormCrearUsuarioServlet'"/></td>
+            </tr>
         </table>
 
     </fieldset>
