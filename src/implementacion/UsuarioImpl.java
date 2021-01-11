@@ -160,4 +160,33 @@ public class UsuarioImpl implements Iusuario{
 	
 	}
 
+	
+	public Profesional obtenerProfesionalPorRun(int runusuario) {
+		Connection con = null;
+		Statement stm = null;
+		ResultSet rs = null;
+		Profesional pro = new Profesional();
+		String sql = "select * from profesional where usuario_run = '" + runusuario + "'";
+		
+		try {
+			con = Singleton.getConnection();
+			stm = con.createStatement();
+			rs = stm.executeQuery(sql);
+			
+			while (rs.next()) {
+				pro.setRun(rs.getInt(1));
+				pro.setNombre(rs.getString(2));
+				pro.setApellido(rs.getString(3));
+				pro.setTelefono(rs.getInt(4));
+				pro.setTituloProfesional(rs.getString(5));
+				pro.setProyecto(rs.getInt(6));
+				pro.setUsuarioRun(rs.getInt(7));
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		return pro;
+	}
 }
