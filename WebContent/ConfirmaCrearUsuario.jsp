@@ -19,7 +19,7 @@
 	%>
 	
 	<header id="seccion">
-        <h2> Crear Capacitación</h2>
+        <h2> Crear Usuario</h2>
         <div class="content-menu">
         <input type="checkbox" id="check">
         <label class="icon-menu" for="check"><img src="iconos/icono-menu.png" alt="" class="icon-menu"></label>

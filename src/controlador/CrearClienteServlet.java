@@ -52,7 +52,21 @@ public class CrearClienteServlet extends HttpServlet {
 		
 		Cliente cli = new Cliente(rut,nombre,apellidos,telefono,afp,sistemasalud,direccion,comuna,edad,usuariorun);
 		UsuarioImpl usrimpl = new UsuarioImpl();
-		usrimpl.crearCliente(cli);
+		boolean res = usrimpl.crearCliente(cli);
+		
+		String msg = "";
+		
+		if (res) {
+			msg = "El cliente se agregó correctamente";
+		}
+		else {
+			msg = "No se pudo agregar al cliente";
+		}
+		
+		request.setAttribute("mensaje", msg);
+	
+		request.getRequestDispatcher("ConfirmaCrearUsuario.jsp").forward(request, response);
+        
 	}
 
 }

@@ -90,7 +90,7 @@ public class UsuarioImpl implements Iusuario{
 				+ Cli.getCliDireccion() + "','" 
 				+ Cli.getCliComuna() + "','" 
 				+ Cli.getCliEdad() + "','"
-				+ Cli.getUsuarioRun() + "','";
+				+ Cli.getUsuarioRun() + "')";
 		try {
 			con = Singleton.getConnection();
 			stm = con.createStatement();
