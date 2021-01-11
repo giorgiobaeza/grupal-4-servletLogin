@@ -31,7 +31,7 @@
             <ul>
                 <li><a href="contactoServlet">Contacto</a></li>
                 <li><a href="loginServlet">Ingreso</a></li>
-                <li><a href="CrearUsuarioServlet">Crear Usuario</a></li>
+                <li><a href="FormCrearUsuarioServlet">Crear Usuario</a></li>
                 <li><a href="FormCrearCapServlet">Crear Capacitaciones</a></li>
                 <li><a href="ListarCapServlet">Listar Capacitaciones</a></li>
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
