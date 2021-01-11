@@ -687,8 +687,79 @@ $(document).ready(function(){
 
     });
     
-	$( function() {
-		$( "#capfecha" ).datepicker();
-	} );
+});
 
+//validaciones para crearUsuario.jsp
+$(document).ready(function(){
+
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.")
+ 
+    
+    $('#usrForm').validate({
+        rules: {
+           
+            nombre: {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },                
+                       
+            apellidos: {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },      
+            
+            fnacimiento: "required",
+
+            rut:  {
+                required: true,
+                digits: true,
+                maxlength: 9,
+                min: 1
+            },
+
+            tipodeusuario:  {
+                required: true,
+                minlength: 1,
+                maxlength: 	50
+            },                                                 
+           
+        },
+
+        messages: {
+            nombre: {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },
+
+            apellidos: {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },    
+            
+            fnacimiento: {
+                required: "Este es un campo obligatorio."
+            },    
+           
+            rut:  {
+                required: "Este es un campo obligatorio.",
+                digits: "Este campo solo acepta dígitos.",
+                maxlength: "Excede numero máximo de dígitos."
+            },
+
+            tipousuario:  {
+                required: "Este es un campo obligatorio.",
+                minlength: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },
+            
+        }
+
+    });
+    
 });

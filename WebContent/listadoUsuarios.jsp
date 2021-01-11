@@ -47,40 +47,26 @@
     <fieldset class="cel- agrupar-t agrupar-e">
         <table class="cel- tablaadm-t tablaadm-e">
             <tr class="negrita">
-                <td>RUN</td>
-                <td>Nombre</td>
-                <td>Apellidos</td>
-                <td>Tipo de Usuario</td>
-                <td></td>
-                <td></td>
+                
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Tipo de Usuario</th>
+                <th>RUN</th>
+                <th></th>
+                <th></th>
             </tr>
+            <c:forEach items="${lusuario}" var="lu">
             <tr>
-                <td>12555777-6</td>
-                <td>Kevin</td>
-                <td>Chuka</td>
-                <td>Administrativo</td>
+                <td><c:out value="${lu.getNombre()}" /></td>
+                <td><c:out value="${lu.getApellido()}" /></td>
+                <td><c:out value="${lu.getFechaNacimiento()}" /></td>
+                <td><c:out value="${lu.getRun()}" /></td>
                 <td><input type="button" value="Eliminar"></td>
                 <td><input type="button" value="Modificar" name="modif"
                         onclick="location.href='editaradministrativo.html'" /></td>
             </tr>
-            <tr>
-                <td>13666444-7</td>
-                <td>Alan</td>
-                <td>Brito</td>
-                <td>Profesional</td>
-                <td><input type="button" value="Eliminar"></td>
-                <td><input type="button" value="Modificar" name="modif"
-                        onclick="location.href='editarprofesional.html'"></td>
-            </tr>
-            <tr>
-                <td>16444777-3</td>
-                <td>Ramiro</td>
-                <td>Ramirez</td>
-                <td>Cliente</td>
-                <td><input type="button" value="Eliminar"></td>
-                <td><input type="button" value="Modificar" name="modif" onclick="location.href='editarcliente.html'">
-                </td>
-            </tr>
+            </c:forEach>
+           
         </table>
 
     </fieldset>

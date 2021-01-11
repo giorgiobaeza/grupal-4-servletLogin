@@ -1,26 +1,29 @@
 package controlador;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import implementacion.UsuarioImpl;
 import modelo.Usuario;
 
 /**
- * Servlet implementation class CrearUsuarioServlet
+ * Servlet implementation class ListadoDeUsuarios
  */
-@WebServlet("/CrearUsuarioServlet")
-public class CrearUsuarioServlet extends HttpServlet {
+@WebServlet("/ListadoDeUsuarios")
+public class ListarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CrearUsuarioServlet() {
+    public ListarUsuarioServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,7 +33,19 @@ public class CrearUsuarioServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//request.getRequestDispatcher("crearUsuario.jsp").forward(request, response);
+		
+		
+		HttpSession misesion = request.getSession();
+		
+		if (misesion == null) {
+			response.sendRedirect("login");
+		}
+		else {
+			UsuarioImpl usuarioimpl = new UsuarioImpl();
+			List<Usuario> listausuario = usuarioimpl.obtenerUsuario();
+			request.setAttribute("lusuario", listausuario);
+			request.getRequestDispatcher("listadoUsuarios.jsp").forward(request, response);
+		}	
 	}
 
 	/**
@@ -38,29 +53,9 @@ public class CrearUsuarioServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String nombre = request.getParameter("nombre");
-		String apellidos = request.getParameter("apellidos");
-		String fnacimiento = request.getParameter("fnacimiento");
-		int rut = Integer.parseInt(request.getParameter("rut"));
-		String tipousuario = request.getParameter("tipousuario");
-
-		Usuario usr = new Usuario(nombre,apellidos,fnacimiento,rut,tipousuario);
-		UsuarioImpl usrimpl = new UsuarioImpl();
-		boolean res = usrimpl.crearUsuario(usr);
+		doGet(request, response);
 		
-		String msg = "";
 		
-		if (res) {
-			msg = "La Capacitacion ha sido creada";
-		}
-		else {
-			msg = "No se pudo guardar la capacitación";
-		}
-		
-		request.setAttribute("mensaje", msg);
-	
-		request.getRequestDispatcher("ConfirmaCrearCap.jsp").forward(request, response);
-        
 	}
 
 }

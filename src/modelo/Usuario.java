@@ -1,20 +1,14 @@
 package modelo;
 
-import java.util.Date;
 
 public class Usuario {
 
 	private String nombre;
 	private String apellido;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 	private int run;
+	private String tipoUsuario;
 	
-	@Override
-	public String toString() {
-		return "Usuario [nombre=" + nombre + ", apellido=" + apellido + ", fechaNacimiento=" + fechaNacimiento
-				+ ", run=" + run + "]";
-	}
-
 	public String getNombre() {
 		return nombre;
 	}
@@ -31,11 +25,11 @@ public class Usuario {
 		this.apellido = apellido;
 	}
 
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
@@ -47,17 +41,30 @@ public class Usuario {
 		this.run = run;
 	}
 
+	public String getTipoUsuario() {
+		return tipoUsuario;
+	}
+
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
+	}
+
+	@Override
+	public String toString() {
+		return "Usuario [nombre=" + nombre + ", apellido=" + apellido + ", fechaNacimiento=" + fechaNacimiento
+				+ ", run=" + run + ", tipoUsuario=" + tipoUsuario + "]";
+	}
+
 	public Usuario() {
 		super();
 	}
 
-	public Usuario(String nombre, String apellido, Date fechaNacimiento, int run) {
+	public Usuario(String nombre, String apellido, String fechaNacimiento, int run, String tipoUsuario) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.fechaNacimiento = fechaNacimiento;
 		this.run = run;
+		this.tipoUsuario = tipoUsuario;
 	}
-	
-	
 }

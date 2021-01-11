@@ -47,9 +47,7 @@ public class ListarCapServlet extends HttpServlet {
 			request.setAttribute("lcapacitacion", listado);
 			request.getRequestDispatcher("listarCapacitacion.jsp").forward(request, response);
 		}
-		
-
-        }	
+	}	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

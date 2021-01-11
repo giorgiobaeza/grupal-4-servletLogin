@@ -7,7 +7,9 @@
 <meta charset="ISO-8859-1">
 <title>Crear Usuario</title>
 	<link rel="stylesheet" href="estilo.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -46,11 +48,11 @@
     </header>
 
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form>
+        <form method="post" action="CrearUsuarioServlet" class="cmxform" id="usrForm">
             <table class="tablausr-t tablausr-e">
                 <tr>
                     <td>Nombre</td>
-                    <td><input type="text" name="nombre" /></td>
+                    <td><input type="text" name="nombre" id="nombre"/></td>
 
                 </tr>
                 <tr>
@@ -71,10 +73,13 @@
                 <tr>
                     <td> Tipo de usuario</td>
                     <td>
-                        <input type="radio" name="tipousuario" value="clie" />Cliente
-                        <input type="radio" name="tipousuario" value="pro" />Profesional
-                        <input type="radio" name="tipousuario" value="adm" />Administrativo
+                        <input type="radio" name="tipousuario" value="cliente" />Cliente
+                        <input type="radio" name="tipousuario" value="profesional" />Profesional
+                        <input type="radio" name="tipousuario" value="administrativo" />Administrativo
                     </td>
+                </tr>
+                <tr>
+                	<td><input type="submit"></td>
                 </tr>
 
 
