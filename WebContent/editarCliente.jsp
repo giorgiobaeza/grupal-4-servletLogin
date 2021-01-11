@@ -99,7 +99,7 @@
 
                 </tr>
                 <tr>
-                    <td><label for="runusuario">Edad</label></td>
+                    <td><label for="runusuario">Run usuario</label></td>
                     <td><input id="runusuario" type="number" name="runusuario" /></td>
 
                 </tr>
