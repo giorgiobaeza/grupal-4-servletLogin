@@ -46,15 +46,18 @@ public class CrearUsuarioServlet extends HttpServlet {
 
 		Usuario usr = new Usuario(nombre,apellidos,fnacimiento,rut,tipousuario);
 		UsuarioImpl usrimpl = new UsuarioImpl();
-		boolean res = usrimpl.crearUsuario(usr);
+		usrimpl.crearUsuario(usr);
 		
 		String msg = "";
 		
-		if (res) {
-			msg = "La Capacitacion ha sido creada";
+		if (tipousuario.equals("cliente")) {
+			request.getRequestDispatcher("editarCliente.jsp").forward(request, response);
 		}
-		else {
-			msg = "No se pudo guardar la capacitación";
+		else if (tipousuario.equals("profesional")){
+			request.getRequestDispatcher("editarProfesional.jsp").forward(request, response);
+		}
+		else if (tipousuario.equals("administrativo")){
+			request.getRequestDispatcher("editarAdministrativo.jsp").forward(request, response);
 		}
 		
 		request.setAttribute("mensaje", msg);
