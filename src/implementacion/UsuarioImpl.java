@@ -161,8 +161,9 @@ public class UsuarioImpl implements Iusuario{
 	}
 
 	
+	
 	@Override
-	public Profesional obtenerProfesionalPorId(int runusuario) {
+	public Profesional obtenerProfesionalPorRun(int runusuario) {
 		Connection con = null;
 		Statement stm = null;
 		ResultSet rs = null;
@@ -192,5 +193,35 @@ public class UsuarioImpl implements Iusuario{
 		}
 		
 		return p;
+	}
+
+	@Override
+	public boolean editarProfessional(Profesional editpro) {
+		boolean resultado = false;
+		Connection con = null;
+		Statement stm = null;
+
+		String sql = "UPDATE profesional SET "
+				+ "run= " + editpro.getRun() 
+				+ ", nombre ='" + editpro.getNombre() 
+				+ "', apellidos='" + editpro.getApellido() 
+				+ "', telefono='" + editpro.getTelefono()
+				+ "', tituloprofesional='" + editpro.getTituloProfesional()
+				+ "',proyecto='" + editpro.getProyecto() 
+				+ "',usuario_run='" + editpro.getUsuarioRun()
+				+ "' WHERE  Usuario_run=" +editpro.getUsuarioRun() + "";
+		
+			try {
+				con = Singleton.getConnection();
+				stm = con.createStatement();
+				System.out.println(sql);
+				stm.execute(sql);
+				resultado = true;
+				stm.close();
+				//con.close();
+			} catch (SQLException e) {
+				System.out.println(e);
+			}
+			return resultado;
 	}
 }
