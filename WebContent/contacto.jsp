@@ -65,6 +65,9 @@
                     <td>Mensaje</td>
                     <td><input type="text" name="mensaje" /></td>
                 </tr>
+                <tr>
+                    <td><input type="submit" value="Enviar" /></td>
+                </tr>
             </table>
         </form>
         
