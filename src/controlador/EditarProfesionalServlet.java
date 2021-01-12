@@ -30,7 +30,7 @@ public class EditarProfesionalServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int runusuario = Integer.parseInt(request.getParameter("runusuario"));
+		int runusuario = Integer.parseInt(request.getParameter("run"));
 		UsuarioImpl usrimpl = new UsuarioImpl();
 		Profesional proaux = usrimpl.obtenerProfesionalPorRun(runusuario);
 		

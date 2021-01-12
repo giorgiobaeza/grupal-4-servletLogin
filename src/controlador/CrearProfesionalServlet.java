@@ -44,7 +44,7 @@ public class CrearProfesionalServlet extends HttpServlet {
 		String apellidos = request.getParameter("apellido");
 		int telefono = Integer.parseInt(request.getParameter("telefono"));
 		String titulo = request.getParameter("titulo");
-		int proyecto = Integer.parseInt(request.getParameter("proyecto"));
+		String proyecto = request.getParameter("proyecto");
 		int usuariorun = Integer.parseInt(request.getParameter("runusuario"));
 	
 

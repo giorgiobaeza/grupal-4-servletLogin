@@ -48,7 +48,7 @@
         </div>
     </header>
 	<fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="actualizarProfesionalServlet" class="cmxform" id="proForm">
+        <form method="post" action="ActualizarProfesionalServlet" class="cmxform" id="proForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                     <td>RUN</td>

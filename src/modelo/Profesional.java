@@ -7,7 +7,7 @@ public class Profesional {
 	private String apellido;
 	private int telefono;
 	private String tituloProfesional;
-	private int proyecto;
+	private String proyecto;
 	private int usuarioRun;
 	
 	public int getRun() {
@@ -40,10 +40,10 @@ public class Profesional {
 	public void setTituloProfesional(String tituloProfesional) {
 		this.tituloProfesional = tituloProfesional;
 	}
-	public int getProyecto() {
+	public String getProyecto() {
 		return proyecto;
 	}
-	public void setProyecto(int proyecto) {
+	public void setProyecto(String proyecto) {
 		this.proyecto = proyecto;
 	}
 	public int getUsuarioRun() {
@@ -60,7 +60,7 @@ public class Profesional {
 				+ "]";
 	}
 	
-	public Profesional(int run, String nombre, String apellido, int telefono, String tituloProfesional, int proyecto,
+	public Profesional(int run, String nombre, String apellido, int telefono, String tituloProfesional, String proyecto,
 			int usuarioRun) {
 		super();
 		this.run = run;

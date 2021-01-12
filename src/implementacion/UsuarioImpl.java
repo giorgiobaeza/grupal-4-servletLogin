@@ -170,7 +170,7 @@ public class UsuarioImpl implements Iusuario{
 		
 		Profesional p = new Profesional();
 		
-		String sql = "select run, nombre, apellido, telefono, tituloprofeional, proyecto, usuario_run from profesional where usuario_run = " + runusuario + "";
+		String sql = "select run, nombres, apellidos, telefono, tituloprofesional, proyecto, usuario_run from profesional where usuario_run = " + runusuario + "";
 		
 		try {
 			con = Singleton.getConnection();
@@ -183,7 +183,7 @@ public class UsuarioImpl implements Iusuario{
 				p.setApellido(rs.getString(3));
 				p.setTelefono(rs.getInt(4));
 				p.setTituloProfesional(rs.getString(5));
-				p.setProyecto(rs.getInt(6));
+				p.setProyecto(rs.getString(6));
 				p.setUsuarioRun(rs.getInt(7));
 				
 			}
