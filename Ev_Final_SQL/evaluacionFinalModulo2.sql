@@ -30,15 +30,6 @@ DROP SEQUENCE proyecto.mejoras_idmejoras_seq;
 
 DROP SEQUENCE proyecto.pagos_idpagos_seq; 
 
--- SE CREA TABLA CONTACTO
-CREATE TABLE contacto (
-    contnombre             VARCHAR2(50) NOT NULL,
-    contcorreo_electronico VARCHAR2(50) NOT NULL,
-    conttelefono           NUMBER(11) NOT NULL,
-    contmensaje            VARCHAR2(200)
-)
-LOGGING;
-
 --SE CREA TABLA ACCIDENTE
 CREATE TABLE accidente (
     idaccidente            NUMBER(9) NOT NULL,
