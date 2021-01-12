@@ -224,4 +224,74 @@ public class UsuarioImpl implements Iusuario{
 			}
 			return resultado;
 	}
+
+	@Override
+	public Cliente obtenerClientePorRun(int runusuario) {
+		Connection con = null;
+		Statement stm = null;
+		ResultSet rs = null;
+		
+		Cliente c = new Cliente();
+		
+		String sql = "select rutcliente, clinombres, cliapellidos, clitelefono, cliafp, clisistemasalud, clidireccion, clicomuna, cliedad, usuario_run from cliente where usuario_run = " + runusuario + "";
+		
+		try {
+			con = Singleton.getConnection();
+			stm = con.createStatement();
+			rs = stm.executeQuery(sql);
+			
+			while (rs.next()) {				
+				c.setRutCliente(rs.getInt(1));
+				c.setCliNombre(rs.getString(2));
+				c.setCliApellido(rs.getString(3));
+				c.setCliTelefono(rs.getString(4));
+				c.setCliAfp(rs.getString(5));
+				c.setCliSistemaSalud(rs.getString(6));
+				c.setCliDireccion(rs.getString(7));
+				c.setCliComuna(rs.getString(8));
+				c.setCliEdad(rs.getInt(9));
+				c.setUsuarioRun(rs.getInt(10));
+
+
+				
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		return c;
+	}
+
+	@Override
+	public boolean editarCliente(Cliente editcli) {
+		boolean resultado = false;
+		Connection con = null;
+		Statement stm = null;
+
+		String sql = "UPDATE cliente SET "
+				+ "rutcliente ='" + editcli.getRutCliente()
+				+ "',clinombres ='" + editcli.getCliNombre()
+				+ "', cliapellidos ='" + editcli.getCliApellido()
+				+ "', clitelefono='" + editcli.getCliTelefono()
+				+ "', cliafp='" + editcli.getCliAfp()
+				+"', clisistemasalud=" + editcli.getCliSistemaSalud()
+				+",clidireccion='" + editcli.getCliDireccion()
+				+"', clicomuna='" + editcli.getCliComuna()
+				+"',cliEdad=" + editcli.getCliEdad()
+				+" WHERE usuario_run="+editcli.getUsuarioRun()+"";
+		
+			try {
+				con = Singleton.getConnection();
+				stm = con.createStatement();
+				System.out.println(sql);
+				stm.execute(sql);
+				resultado = true;
+				stm.close();
+				//con.close();
+			} catch (SQLException e) {
+				System.out.println(e);
+			}
+			return resultado;
+	}
 }

@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import implementacion.UsuarioImpl;
+import modelo.Cliente;
+
 /**
  * Servlet implementation class EditarClienteServlet
  */
@@ -27,6 +30,12 @@ public class EditarClienteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		int runusuario = Integer.parseInt(request.getParameter("run"));		
+		
+		UsuarioImpl usimpl = new UsuarioImpl();
+		Cliente usraux = usimpl.obtenerClientePorRun(runusuario);
+		
+		request.setAttribute("us", usraux);
 		request.getRequestDispatcher("editarCliente.jsp").forward(request, response);
 	}
 

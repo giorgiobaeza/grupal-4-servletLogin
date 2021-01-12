@@ -16,5 +16,7 @@ public interface Iusuario {
 	boolean crearProfesional(Profesional Pro);
 	public Profesional obtenerProfesionalPorRun(int runusuario);
 	boolean editarProfessional(Profesional editpro);
+	public Cliente obtenerClientePorRun(int runusuario);
+	boolean editarCliente(Cliente editcli);
 
 }

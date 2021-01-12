@@ -47,32 +47,32 @@
         </nav>
         </div>
     </header>
-        <form method="post" action="CrearClienteServlet" class="cmxform" id="cliForm">
+        <form method="post" action="ActualizarClienteServlet" class="cmxform" id="cliForm">
         <fieldset class="cel- agrupar-t agrupar-e">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                     <td><label for="run">RUN</label></td>
-                    <td><input id="run" type="number" name="run" /></td>
+                    <td><input id="run" type="number" name="run" value='<c:out value="${us.getRutCliente()}" />' /></td>
 
                 </tr>
                 <tr>
                     <td><label for="nombre">Nombre</label></td>
-                    <td><input id="nombre" type="text" name="nombre" /></td>
+                    <td><input id="nombre" type="text" name="nombre" value='<c:out value="${us.getCliNombre()}" />' /></td>
 
                 </tr>
                 <tr>
                     <td><label for="apellido">Apellido</label></td>
-                    <td><input id="apellido" type="text" name="apellido" /></td>
+                    <td><input id="apellido" type="text" name="apellido" value='<c:out value="${us.getCliApellido()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td><label for="telefono">Teléfono</label></td>
-                    <td><input id="telefono" type="number" name="telefono" /></td>
+                    <td><input id="telefono" type="number" name="telefono" value='<c:out value="${us.getCliTelefono()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td><label for="afp">AFP</label></td>
-                    <td><input id="afp" type="text" name="afp" /></td>
+                    <td><input id="afp" type="text" name="afp" value='<c:out value="${us.getCliAfp()}" />'/></td>
 
                 </tr>
                 <tr>
@@ -86,22 +86,22 @@
                 </tr>
                 <tr>
                     <td><label for="direc">Direccion </label></td>
-                    <td><input id="direc" type="text" name="direc" /></td>
+                    <td><input id="direc" type="text" name="direc" value='<c:out value="${us.getCliDireccion()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td><label for="comuna">Comuna</label></td>
-                    <td><input id="comuna" type="text" name="comuna" /></td>
+                    <td><input id="comuna" type="text" name="comuna" value='<c:out value="${us.getCliComuna()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td><label for="edad">Edad</label></td>
-                    <td><input id="edad" type="number" name="edad" /></td>
+                    <td><input id="edad" type="number" name="edad" value='<c:out value="${us.getCliEdad()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td><label for="runusuario">Run usuario</label></td>
-                    <td><input id="runusuario" type="number" name="runusuario" /></td>
+                    <td><input id="runusuario" type="number" name="runusuario" value='<c:out value="${us.getUsuarioRun()}" />'/></td>
 
                 </tr>
                 <tr>
