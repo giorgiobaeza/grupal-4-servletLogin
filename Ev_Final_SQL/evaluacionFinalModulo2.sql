@@ -183,7 +183,8 @@ CREATE TABLE usuario (
     nombre           VARCHAR2(30) NOT NULL,
     apellido         VARCHAR2(50) NOT NULL,
     fechanacimiento  DATE NOT NULL,
-    run              NUMBER(9) NOT NULL
+    run              NUMBER(9) NOT NULL,
+    tipousuario      VARCHAR2(20)
 )
 LOGGING;
 
@@ -295,15 +296,15 @@ END;
 /
 
 --SE CREAN REGISTROS PARA TABLA USUARIOS
-INSERT INTO usuario values ('rosita', 'rosales', TO_DATE('02/10/1980', 'DD/MM/YYYY'), 123123456);
-INSERT INTO usuario values ('juanita', 'flores', TO_DATE('31/01/1978', 'DD/MM/YYYY'), 123456456);
-INSERT INTO usuario values ('emilio', 'perez', TO_DATE('15/10/1974', 'DD/MM/YYYY'), 111123456);
-INSERT INTO usuario values ('joaquin', 'moralez', TO_DATE('22/06/1990', 'DD/MM/YYYY'), 182345673);
-INSERT INTO usuario values ('manuel', 'lopez', TO_DATE('05/02/1988', 'DD/MM/YYYY'), 178883994);
-INSERT INTO usuario values ('olga', 'medina', TO_DATE('12/12/1983', 'DD/MM/YYYY'), 165556732);
-INSERT INTO usuario values ('carlos', 'carmona', TO_DATE('13/01/1990', 'DD/MM/YYYY'), 912345678);
-INSERT INTO usuario values ('alfredo', 'perez', TO_DATE('12/12/1992', 'DD/MM/YYYY'), 159806431);
-INSERT INTO usuario values ('felipe', 'flores', TO_DATE('30/05/1998', 'DD/MM/YYYY'), 912456778);
+INSERT INTO usuario values ('rosita', 'rosales', TO_DATE('02/10/1980', 'DD/MM/YYYY'), 123123456, 'cliente');
+INSERT INTO usuario values ('juanita', 'flores', TO_DATE('31/01/1978', 'DD/MM/YYYY'), 123456456, 'cliente');
+INSERT INTO usuario values ('emilio', 'perez', TO_DATE('15/10/1974', 'DD/MM/YYYY'), 111123456, 'cliente');
+INSERT INTO usuario values ('joaquin', 'moralez', TO_DATE('22/06/1990', 'DD/MM/YYYY'), 182345673, 'administrativo');
+INSERT INTO usuario values ('manuel', 'lopez', TO_DATE('05/02/1988', 'DD/MM/YYYY'), 178883994, 'administrativo');
+INSERT INTO usuario values ('olga', 'medina', TO_DATE('12/12/1983', 'DD/MM/YYYY'), 165556732, 'administrativo');
+INSERT INTO usuario values ('carlos', 'carmona', TO_DATE('13/01/1990', 'DD/MM/YYYY'), 912345678, 'profesional');
+INSERT INTO usuario values ('alfredo', 'perez', TO_DATE('12/12/1992', 'DD/MM/YYYY'), 159806431, 'profesional');
+INSERT INTO usuario values ('felipe', 'flores', TO_DATE('30/05/1998', 'DD/MM/YYYY'), 912456778, 'profesional');
 
 --SE CREAN REGISTROS PARA TABLA CLIENTES
 INSERT INTO cliente values (123456748, 'rosita', 'rosales', 5555555, 'modelo', 'fonasa', 'calle c', 'colina', 40, 123123456);

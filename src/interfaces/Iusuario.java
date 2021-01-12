@@ -14,4 +14,6 @@ public interface Iusuario {
 	boolean crearCliente(Cliente cli);
 	boolean crearAdministrativo(Administrativo Adm);
 	boolean crearProfesional(Profesional Pro);
+	public Profesional obtenerProfesionalPorRun(int runusuario);
+
 }

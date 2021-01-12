@@ -46,17 +46,25 @@ public class CrearUsuarioServlet extends HttpServlet {
 
 		Usuario usr = new Usuario(nombre,apellidos,fnacimiento,rut,tipousuario);
 		UsuarioImpl usrimpl = new UsuarioImpl();
-		usrimpl.crearUsuario(usr);
+		boolean res = usrimpl.crearUsuario(usr);
+		String msg = "";
 		
-		
-		if (tipousuario.equals("cliente")) {
-			request.getRequestDispatcher("editarCliente.jsp").forward(request, response);
+		if (res) {
+			if (tipousuario.equals("cliente")) {
+				request.getRequestDispatcher("crearCliente.jsp").forward(request, response);
+			}
+			else if (tipousuario.equals("profesional")){
+				request.getRequestDispatcher("crearProfesional.jsp").forward(request, response);
+			}
+			else if (tipousuario.equals("administrativo")){
+				request.getRequestDispatcher("crearAdministrativo.jsp").forward(request, response);
+			}
 		}
-		else if (tipousuario.equals("profesional")){
-			request.getRequestDispatcher("editarProfesional.jsp").forward(request, response);
-		}
-		else if (tipousuario.equals("administrativo")){
-			request.getRequestDispatcher("editarAdministrativo.jsp").forward(request, response);
+		else {
+			msg = "no se pudo crear el usuario";
+			request.setAttribute("mensaje", msg);
+
+			request.getRequestDispatcher("CrearUsuario.jsp").forward(request, response);
 		}
 		
 	

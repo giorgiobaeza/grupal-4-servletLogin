@@ -15,7 +15,7 @@ public class UsoSingleton {
 			Statement stmt=con.createStatement();  
 
 			//paso 4: ejecutar query
-			ResultSet rs = stmt.executeQuery ("select * from capacitacion");
+			ResultSet rs = stmt.executeQuery ("select * from contacto");
 			
 			while(rs.next()) {
 				System.out.println(rs.getInt(1) + "  " 
