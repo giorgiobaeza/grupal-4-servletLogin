@@ -63,7 +63,7 @@
                 <td><c:out value="${lu.getFechaNacimiento()}" /></td>
                 <td><c:out value="${lu.getRun()}" /></td>
                 <td><c:out value="${lu.getTipoUsuario()}" /></td>
-                <td><input type="button" value="Modificar" name="modif" onclick="location.href='editaradministrativo.html'" /></td>
+                <td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarProfesionalServlet?runusuario=<c:out value='${lu.getRun()}' />'" /></td>
             </tr>
             </c:forEach>
             <tr>

@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import implementacion.UsuarioImpl;
+import modelo.Profesional;
+
 /**
  * Servlet implementation class EditarProfesionalServlet
  */
@@ -27,6 +30,11 @@ public class EditarProfesionalServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		int runusuario = Integer.parseInt(request.getParameter("runusuario"));
+		UsuarioImpl usrimpl = new UsuarioImpl();
+		Profesional proaux = usrimpl.obtenerProfesionalPorRun(runusuario);
+		
+		request.setAttribute("pr", proaux);
 		request.getRequestDispatcher("editarProfesional.jsp").forward(request, response);
 	}
 

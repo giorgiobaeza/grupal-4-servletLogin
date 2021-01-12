@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.VentaImpl;
-import modelo.Venta;
+import implementacion.UsuarioImpl;
+import modelo.Profesional;
 
 /**
  * Servlet implementation class ActualizaProfesionalServlet
@@ -40,28 +40,34 @@ public class ActualizaProfesionalServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-				int run = Integer.parseInt(request.getParameter("txtidventa"));
-				String nombre = request.getParameter("txtfecha");
-				String apellido = request.getParameter("txtvendedor");
-				int telefono = Integer.parseInt(request.getParameter("txtmonto"));
-				String tituloprofesional = request.getParameter("txtvendedor");
-				int proyecto = Integer.parseInt(request.getParameter("txtmonto"));
-				int usuariorun = Integer.parseInt(request.getParameter("txtmonto"));
+		doGet(request, response);
+		int rut = Integer.parseInt(request.getParameter("run"));
+		String nombre = request.getParameter("nombre");
+		String apellidos = request.getParameter("apellido");
+		int telefono = Integer.parseInt(request.getParameter("telefono"));
+		String titulo = request.getParameter("titulo");
+		int proyecto = Integer.parseInt(request.getParameter("proyecto"));
+		int usuariorun = Integer.parseInt(request.getParameter("runusuario"));
+	
 
-				Venta vt = new Venta(id,fecha,vendedor,monto);
-				VentaImpl vtimpl = new VentaImpl();
-				boolean res = vtimpl.editarVenta(vt);
-				String msg = "";
-				
-				if (res) {
-					msg = "La venta se editó exitosamente";
-				}
-				else {
-					msg = "La venta no se pudo editar porque ocurrió un error";
-				}
-
-				request.setAttribute("mensaje", msg);
-				request.getRequestDispatcher("msgcrearventa.jsp").forward(request, response);
+		
+		Profesional pro = new Profesional(rut,nombre,apellidos,telefono,titulo,proyecto,usuariorun);
+		UsuarioImpl usrimpl = new UsuarioImpl();
+		boolean res = usrimpl.crearProfesional(pro);
+		
+		String msg = "";
+		
+		if (res) {
+			msg = "El Profesional se agregó correctamente";
+		}
+		else {
+			msg = "No se pudo agregar al Profesional";
+		}
+		
+		request.setAttribute("mensaje", msg);
+	
+		request.getRequestDispatcher("ConfirmaCrearUsuario.jsp").forward(request, response);
 	}
+	
 
 }

@@ -82,7 +82,7 @@
                 </tr>
                 <tr>
                     <td>run usuario</td>
-                    <td><input type="text" name="runusuario" /></td>
+                    <td><input type="text" name="runusuario" value='<c:out value="${pr.getUsuarioRun()}" />' readonly="readonly" /></td>
 
                 </tr>
                 
