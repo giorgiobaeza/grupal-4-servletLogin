@@ -33,6 +33,7 @@
                 <li><a href="loginServlet">Ingreso</a></li>
                 <li><a href="FormCrearUsuarioServlet">Crear Usuario</a></li>
                 <li><a href="FormCrearCapServlet">Crear Capacitaciones</a></li>
+                <li><a href="listarUsuarioServlet">Listado de Usuarios</a></li>
                 <li><a href="ListarCapServlet">Listar Capacitaciones</a></li>
                 <li><a href="administrarasistentes.html">Asistentes Capacitaciones</a></li>
                 <li><a href="listadovisitas.html">Listado Visitas</a></li>
@@ -40,7 +41,6 @@
                 <li><a href="listadoasesorias.html">Listado Asesorías</a></li>
                 <li><a href="listadoaccidentes.html">Listado Accidentes</a></li>
                 <li><a href="reportes.html">Reportes</a></li>
-
             </ul>
         </nav>
         </div>

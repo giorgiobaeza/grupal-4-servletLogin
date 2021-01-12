@@ -16,7 +16,7 @@ import modelo.Usuario;
 /**
  * Servlet implementation class ListadoDeUsuarios
  */
-@WebServlet("/ListadoDeUsuarios")
+@WebServlet("/listarUsuarioServlet")
 public class ListarUsuarioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
