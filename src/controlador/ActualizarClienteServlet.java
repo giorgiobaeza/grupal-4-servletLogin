@@ -62,9 +62,9 @@ public class ActualizarClienteServlet extends HttpServlet {
 		String msg = "";
 
 		if (res) {
-			msg = "El cliente se editó exitosamente";
+			msg = "El cliente se editó correctamente";
 		} else {
-			msg = "El cliente no se pudo editar porque ocurrió un error";
+			msg = "No se pudo editar el cliente";
 		}
 
 		request.setAttribute("mensaje", msg);

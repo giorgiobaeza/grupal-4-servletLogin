@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import implementacion.UsuarioImpl;
+import modelo.Administrativo;
+
 /**
  * Servlet implementation class EditarAdministrativoServlet
  */
@@ -27,8 +30,14 @@ public class EditarAdministrativoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("editarAdministrativo.jsp").forward(request, response);
-	}
+		
+		int runusuario = Integer.parseInt(request.getParameter("run"));
+
+		UsuarioImpl usimpl = new UsuarioImpl();
+		Administrativo admaux = usimpl.obtenerAdministrativoPorRun(runusuario);
+
+		request.setAttribute("ad", admaux);
+		request.getRequestDispatcher("editarAdministrativo.jsp").forward(request, response);	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

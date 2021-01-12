@@ -205,11 +205,10 @@ public class UsuarioImpl implements Iusuario{
 				+ "run= " + editpro.getRun() 
 				+ ", nombre ='" + editpro.getNombre() 
 				+ "', apellidos='" + editpro.getApellido() 
-				+ "', telefono='" + editpro.getTelefono()
-				+ "', tituloprofesional='" + editpro.getTituloProfesional()
+				+ "', telefono=" + editpro.getTelefono()
+				+ ", tituloprofesional='" + editpro.getTituloProfesional()
 				+ "',proyecto='" + editpro.getProyecto() 
-				+ "',usuario_run='" + editpro.getUsuarioRun()
-				+ "' WHERE  Usuario_run=" +editpro.getUsuarioRun() + "";
+				+ "' WHERE  Usuario_run=" + editpro.getUsuarioRun() + "";
 		
 			try {
 				con = Singleton.getConnection();
@@ -275,8 +274,8 @@ public class UsuarioImpl implements Iusuario{
 				+ "', cliapellidos ='" + editcli.getCliApellido()
 				+ "', clitelefono='" + editcli.getCliTelefono()
 				+ "', cliafp='" + editcli.getCliAfp()
-				+"', clisistemasalud=" + editcli.getCliSistemaSalud()
-				+",clidireccion='" + editcli.getCliDireccion()
+				+"', clisistemasalud='" + editcli.getCliSistemaSalud()
+				+"',clidireccion='" + editcli.getCliDireccion()
 				+"', clicomuna='" + editcli.getCliComuna()
 				+"',cliEdad=" + editcli.getCliEdad()
 				+" WHERE usuario_run="+editcli.getUsuarioRun()+"";
@@ -293,5 +292,69 @@ public class UsuarioImpl implements Iusuario{
 				System.out.println(e);
 			}
 			return resultado;
+	}
+
+	@Override
+	public Administrativo obtenerAdministrativoPorRun(int runusuario) {
+		Connection con = null;
+		Statement stm = null;
+		ResultSet rs = null;
+		
+		Administrativo a = new Administrativo();
+		
+		String sql = "select Run, Nombres, Apellidos, email, Area, Usuario_run from administrativo where Usuario_run = "+ runusuario +"";
+		
+		try {
+			con = Singleton.getConnection();
+			stm = con.createStatement();
+			rs = stm.executeQuery(sql);
+			
+			while (rs.next()) {				
+				a.setRun(rs.getInt(1));
+				a.setNombre(rs.getString(2));
+				a.setApellido(rs.getString(3));
+				a.setEmail(rs.getString(4));
+				a.setArea(rs.getString(5));
+				a.setUsuarioRun(rs.getInt(6));
+				
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		return a;
+	}
+	
+
+	@Override
+	public boolean editarAdministrativo(Administrativo editadm) {
+		boolean resultado = false;
+		Connection con = null;
+		Statement stm = null;
+
+		
+		String sql ="UPDATE administrativo SET "
+				+ " run =" + editadm.getRun()
+				+ ",nombres='" + editadm.getNombre()
+				+ "',apellidos='" + editadm.getApellido()
+				+ "',email='"	+ editadm.getEmail()
+				+ "',area='" + editadm.getArea()
+				+"'WHERE Usuario_run = " + editadm.getUsuarioRun() + "";
+		
+	
+		try {
+			con = Singleton.getConnection();
+			stm = con.createStatement();
+			System.out.println(sql);
+			stm.execute(sql);
+			resultado = true;
+			stm.close();
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+	
+	
+		return resultado;
 	}
 }

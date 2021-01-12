@@ -51,8 +51,8 @@
 		<h1><c:out value="${ mensaje }"/></h1>
 		<table>
 		<tr>
-			<td><a href="./FormCrearCapServlet"><button>Agregar capacitación</button></a></td>
-			<td><a href="./ListarCapServlet"><button>Volver a listado capacitación</button></a></td>
+			<td><a href="./FormCrearUsuarioServlet"><button>Agregar Nuevo Usuario</button></a></td>
+			<td><a href="./ListarUsuarioServlet"><button>Volver a listado de Usuarios</button></a></td>
 		</tr>
 		</table>
     </fieldset>

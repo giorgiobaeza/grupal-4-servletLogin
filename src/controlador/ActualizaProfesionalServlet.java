@@ -57,10 +57,10 @@ public class ActualizaProfesionalServlet extends HttpServlet {
 		String msg = "";
 		
 		if (res) {
-			msg = "El Profesional se agregó correctamente";
+			msg = "El Profesional se editó correctamente";
 		}
 		else {
-			msg = "No se pudo agregar al Profesional";
+			msg = "No se pudo editar el Profesional";
 		}
 		
 		request.setAttribute("mensaje", msg);

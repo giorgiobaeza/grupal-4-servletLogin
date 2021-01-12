@@ -69,7 +69,7 @@
 				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarClienteServlet?run=<c:out value='${lu.getRun()}' />'"></td>				
 			</c:if>	
 			<c:if test="${lu.getTipoUsuario()=='administrativo' }">
-				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarAdministrativoServlet?TipoUsuario=<c:out value='${lu.getTipoUsuario()}'/>'"></td>				
+				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarAdministrativoServlet?run=<c:out value='${lu.getRun()}'/>'"></td>				
 			</c:if>	
 			<c:if test="${lu.getTipoUsuario()=='profesional' }">
 				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarProfesionalServlet?run=<c:out value='${lu.getRun()}'/>'"></td>				

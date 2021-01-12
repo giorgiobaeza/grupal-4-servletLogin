@@ -48,32 +48,32 @@
         </div>
     </header>
 	<fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="CrearAdministrativoServlet" class="cmxform" id="admForm">
+        <form method="post" action="ActualizarAdministrativoServlet" class="cmxform" id="admForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                     <td>RUN</td>
-                    <td><input type="text" name="run" /></td>
+                    <td><input type="text" name="run" value='<c:out value="${ad.getRun()}" />'/></td>
                 </tr>
 
                 <tr>
                     <td>Nombres</td>
-                    <td><input type="text" name="nombre" /></td>
+                    <td><input type="text" name="nombre" value='<c:out value="${ad.getNombre()}" />'/></td>
                 </tr>
                 <tr>
                     <td>Apellidos</td>
-                    <td><input type="text" name="apellido" /></td>
+                    <td><input type="text" name="apellido" value='<c:out value="${ad.getApellido()}" />'/></td>
                 </tr>
                 <tr>
                     <td>Correo electrónico</td>
-                    <td><input type="text" name="email" /></td>
+                    <td><input type="text" name="email" value='<c:out value="${ad.getEmail()}" />'/></td>
                 </tr>
                 <tr>
                     <td>Area</td>
-                    <td><input type="text" name="area" /></td>
+                    <td><input type="text" name="area" value='<c:out value="${ad.getArea()}" />' /></td>
                 </tr>
                 <tr>
                     <td>run usuario</td>
-                    <td><input type="text" name="runusuario" /></td>
+                    <td><input type="text" name="runusuario" value='<c:out value="${ad.getUsuarioRun()}" />'/></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Enviar" /></td>
