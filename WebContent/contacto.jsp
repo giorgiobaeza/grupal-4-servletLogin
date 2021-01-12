@@ -47,7 +47,7 @@
     </header>
 
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form method="post" action="CrearContactoServlet" class="cmxform" id="conForm">
+        <form method="post" action="CrearContactoServlet" class="cmxform" id="contForm"> 
             <table class="cel- tablas-t tablas-e">
                 <tr>
                     <td>Nombre</td>
