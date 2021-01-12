@@ -836,3 +836,33 @@ $(document).ready(function(){
         }
     });
 });
+
+//validacion formulario Contacto
+$(document).ready(function(){
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.")
+
+    $('#contForm').validate({
+        rules: {
+            
+            nombre: "required",
+            email: "requiered",
+            telefono: {
+                required: true,
+                maxlength: 9
+            },
+            mensage: "requiered", 
+        },
+        messages: {
+            
+            nombre: "Este es un campo obligatorio.",
+            email: "Este es un campo obligatorio.",
+            telefono: {
+                required: "Este es un campo obligatorio.",
+                maxlength: "Excede numero máximo de caracteres."
+            },
+            mesage: "Este es un campo obligatorio.",
+        }
+    });
+});
