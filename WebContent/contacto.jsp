@@ -47,7 +47,7 @@
     </header>
 
     <fieldset class="cel- agrupar-t agrupar-e">
-        <form>
+        <form method="post" action="CrearContactoServlet" class="cmxform" id="conForm">
             <table class="cel- tablas-t tablas-e">
                 <tr>
                     <td>Nombre</td>
@@ -64,6 +64,9 @@
                 <tr>
                     <td>Mensaje</td>
                     <td><input type="text" name="mensaje" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Enviar" /></td>
                 </tr>
             </table>
         </form>

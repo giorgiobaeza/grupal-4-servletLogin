@@ -63,12 +63,20 @@
                 <td><c:out value="${lu.getFechaNacimiento()}" /></td>
                 <td><c:out value="${lu.getRun()}" /></td>
                 <td><c:out value="${lu.getTipoUsuario()}" /></td>
-                <td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarProfesionalServlet?runusuario=<c:out value='${lu.getRun()}' />'" /></td>
-            </tr>
-            </c:forEach>
-            <tr>
-            	<td><input type="submit" onclick="location.href='FormCrearUsuarioServlet'"/></td>
-            </tr>
+            
+            <td>
+            <c:if test="${lu.getTipoUsuario()=='cliente' }">
+				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarClienteServlet?idUsuario=<c:out value='${lu.getTipoUsuario()}' />'"></td>				
+			</c:if>	
+			<c:if test="${lu.getTipoUsuario()=='administrativo' }">
+				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarAdministrativoServlet?TipoUsuario=<c:out value='${lu.getTipoUsuario()}'/>'"></td>				
+			</c:if>	
+			<c:if test="${lu.getTipoUsuario()=='profesional' }">
+				<td><input type="button" value="Modificar" name="modif" onclick="location.href='EditarProfesionalServlet?TipoUsuario=<c:out value='${lu.getTipoUsuario()}'/>'"></td>				
+			</c:if>
+			</td>
+			</tr>
+			</c:forEach>
         </table>
 
     </fieldset>

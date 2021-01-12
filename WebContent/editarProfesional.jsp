@@ -52,32 +52,32 @@
             <table class="cel- tablas-t tablas-e">
                 <tr>
                     <td>RUN</td>
-                    <td><input type="text" name="run" /></td>
+                    <td><input type="text" name="run" value='<c:out value="${pr.getRun()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td>Nombres</td>
-                    <td> <input type="text" name="nombre" /></td>
+                    <td> <input type="text" name="nombre" value='<c:out value="${pr.getNombre()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td> Apellidos</td>
-                    <td><input type="text" name="apellido" /></td>
+                    <td><input type="text" name="apellido" value='<c:out value="${pr.getApellido()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td>Teléfono</td>
-                    <td><input type="text" name="telefono" /></td>
+                    <td><input type="text" name="telefono" value='<c:out value="${pr.getTelefono()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td>Título</td>
-                    <td><input type="text" name="titulo" /></td>
+                    <td><input type="text" name="titulo" value='<c:out value="${pr.getTituloProfesional()}" />'/></td>
 
                 </tr>
                 <tr>
                     <td>Proyecto</td>
-                    <td><input type="text" name="proyecto" /></td>
+                    <td><input type="text" name="proyecto" value='<c:out value="${pr.getProyecto()}" />'/></td>
 
                 </tr>
                 <tr>
